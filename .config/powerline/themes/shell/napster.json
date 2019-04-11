@@ -1,0 +1,45 @@
+{
+  "segments": {
+    "above":[
+        {
+       "left": [
+           {
+        "function": "powerline.segments.common.vcs.branch",
+        "priority": 50,
+        "args": {
+          "status_colors": true
+        }
+      },
+      {
+          "name": "git_stash",
+          "function": "powerline.segments.common.vcs.stash"
+      }
+       ]
+        }
+    ],
+      "left": [
+    {
+                        "name": "venv",
+                        "function": "powerline.segments.common.env.virtualenv"
+                    },
+                    {
+                        "name": "user",
+                        "function": "powerline.segments.common.env.user",
+                        "priority": 30
+                    },
+                    
+                    {
+                        "name": "cwd",
+                        "function": "powerline.segments.common.env.cwd",
+                        "args": {
+                           "dir_limit_depth": 1 
+                        }
+                    },
+                    {
+                        "name": "shell_test",
+                        "function": "jobnum"
+                    }
+                    
+      ]
+  }
+}
