@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+
+_is_enabled() {
+    ( ([ x"$1" = x"enabled" ] || [ x"$1" = x"true" ] || [ x"$1" = x"yes" ] || [ x"$1" = x"1" ]) && return 0 ) || return 1
+}
+
+_ssh_or_mosh_args() {
+    args=$(printf '%s' "$1" | awk '/ssh/ && !/vagrant ssh/ && !/autossh/ && !/-W/ { $1=""; print $0; exit }')
+    if [ -z "$args" ]; then
+        args=$(printf '%s' "$1" | grep 'mosh-client' | sed -E -e 's/.*mosh-client -# (.*)\|.*$/\1/' -e 's/-[^ ]*//g' -e 's/\d:\d//g')
+    fi
+
+    printf '%s' "$args"
+}
+
+_tty_info() {
+    tty="${1##/dev/}"
+    uname -s | grep -q "CYGWIN" && cygwin=true
+
+    if [ x"$cygwin" = x"true" ]; then
+        ps -af | tail -n +2 | awk -v tty="$tty" '
+        $4 == tty { user[$2] = $1; child[$3] = $2 }
+        END {
+            for (i in user)
+            {
+                if (!(i in child))
+                {
+                    file = "/proc/" i "/cmdline"; getline command < file; close(file)
+                    gsub(/\0/, " ", command)
+                    print i, user[i], command
+                    exit
+                }
+            }
+        }
+        '
+    else
+        ps -t "$tty" -o user= -o pid= -o ppid= -o command= | awk '{ user[$2] = $1; child[$3] = $2; for (i = 4 ; i <= NF; ++i) command[$2] = i > 4 ? command[$2] FS $i : $i }
+        END {
+            for (i in user)
+            {
+                if (!(i in child))
+                {
+                    print i, user[i], command[i]
+                    exit
+                }
+            }
+        }'
+   fi
+}
+
+_username() {
+    tty=${1:-$(tmux display -p '#{pane_tty}')}
+    ssh_only=$2
+
+    tty_info=$(_tty_info "$tty")
+    command=$(printf '%s' "$tty_info" | cut -d' ' -f3-)
+
+    ssh_or_mosh_args=$(_ssh_or_mosh_args "$command")
+    if [ -n "$ssh_or_mosh_args" ]; then
+        # shellcheck disable=SC2086
+        username=$(ssh -G $ssh_or_mosh_args 2>/dev/null | awk 'NR > 2 { exit } ; /^user / { print $2 }')
+        # shellcheck disable=SC2086
+        [ -z "$username" ] && username=$(ssh -T -o ControlPath=none -o ProxyCommand="sh -c 'echo %%username%% %r >&2'" $ssh_or_mosh_args 2>&1 | awk '/^%username% / { print $2; exit }')
+    else
+        if ! _is_enabled "$ssh_only"; then
+            username=$(printf '%s' "$tty_info" | cut -d' ' -f2)
+        fi
+    fi
+
+    printf '%s' "$username"
+}
+
+_root() {
+    tty=${1:-$(tmux display -p '#{pane_tty}')}
+    username=$(_username "$tty" false)
+    
+    if [ x"$username" = x"root" ]; then 
+        echo "!"
+    else
+        echo ""
+    fi
+}
+
+_main() {
+    _root "$1" "$2"
+}
+
+_main "$1" "$2"

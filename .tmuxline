@@ -1,0 +1,37 @@
+# This tmux statusbar config was created by tmuxline.vim
+# on Wed, 03 Apr 2019
+
+set -g status-justify "left"
+set -g status "on"
+set -g status-attr "none"
+set -g message-command-bg "colour73"
+set -g status-left-length "100"
+set -g pane-active-border-fg "colour116"
+set -g status-bg "colour16"
+set -g message-command-fg "colour16"
+set -g pane-border-fg "colour73"
+set -g message-bg "colour73"
+set -g status-left-attr "none"
+set -g status-right-attr "none"
+set -g @prefix_highlight_fg 'colour73'
+set -g @prefix_highlight_bg 'colour16' 
+set -g @prefix_highlight_show_copy_mode 'on'
+set -g @prefix_highlight_copy_mode_attr 'fg=colour73,bg=colour16'
+set -g status-right-length "100"
+set -g message-fg "colour16"
+setw -g window-status-fg "colour116"
+setw -g window-status-attr "none"
+setw -g window-status-activity-bg "colour16"
+setw -g window-status-activity-attr "none"
+setw -g window-status-activity-fg "colour116"
+setw -g window-status-separator ""
+setw -g window-status-bg "colour16"
+
+
+set -g status-left "#[fg=colour16,bg=colour116] #{cpu_icon} #[fg=colour116,bg=colour73,nobold,nounderscore,noitalics] #[fg=colour16,bg=colour73]#{battery_percentage} #{battery_icon}"
+
+set -g status-right "#[fg=colour116,bg=colour16,noblink]#{prefix_highlight}#[fg=colour116,bg=colour16,blink]#(~/.tmux.root #{pane_tty} #D)#[fg=colour116,bg=colour16,noblink]#{?window_zoomed_flag, ⚙,} #[fg=colour73,bg=colour16,nobold,nounderscore,noitalics]#[fg=colour16,bg=colour73] %Y-%m-%d  %I:%M%p #[fg=colour116,bg=colour73,nobold,nounderscore,noitalics]#[fg=colour16,bg=colour116] ↑#{uptime} #[fg=#d55d06,bg=colour116]#[fg=colour16,bg=#d55d06] #h #[fg=#d50306,bg=#d55d06]#[fg=colour16,bg=#d50306,blink]#(~/.tmux.vpn)"
+
+setw -g window-status-format "#[fg=colour73,bg=colour16,nobold,nounderscore,noitalics]#{?#{==:#{window_index},1},,}#[fg=colour116,bg=colour16] #I #[fg=colour116,bg=colour16] #W "
+
+setw -g window-status-current-format "#[fg=colour16,bg=colour73,nobold,nounderscore,noitalics]#{?#{==:#{window_index},1},,}#[fg=colour16,bg=colour73] #I #[fg=colour16,bg=colour73] #W #[fg=colour73,bg=colour16,nobold,nounderscore,noitalics]"
