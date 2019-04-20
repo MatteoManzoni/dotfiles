@@ -75,6 +75,7 @@ pikparamcopy() {
 pikfilecopy() {
     piknik -copy < "$1"
 }
+
 alias pikcopy='piknik -copy'
 alias pikpaste='piknik -paste'
 alias pikmove='piknik -move'
@@ -96,3 +97,6 @@ if [[ $DISPLAY ]]; then
     [[ -z "$TMUX" ]] && exec tmux
 fi
 
+mailwho() {
+    curl cli.fyi/"$1"
+}
