@@ -3,29 +3,29 @@
 
 set -g status-justify "left"
 set -g status "on"
-set -g status-attr "none"
-set -g message-command-bg "colour73"
+#set -g status-attr "none" #Removed after tmux 2.9
+#set -g message-command-bg "colour73" #Removed after tmux 2.9
 set -g status-left-length "100"
-set -g pane-active-border-fg "colour116"
+#set -g pane-active-border-fg "colour116"
 set -g status-bg "colour16"
-set -g message-command-fg "colour16"
-set -g pane-border-fg "colour73"
-set -g message-bg "colour73"
-set -g status-left-attr "none"
-set -g status-right-attr "none"
+#set -g message-command-fg "colour16" #Removed after tmux 2.9
+#set -g pane-border-fg "colour73" #Removed after tmux 2.9
+#set -g message-bg "colour73" #Removed after tmux 2.9
+#set -g status-left-attr "none" #Removed after tmux 2.9
+#set -g status-right-attr "none" #Removed after tmux 2.9
 set -g @prefix_highlight_fg 'colour73'
 set -g @prefix_highlight_bg 'colour16' 
 set -g @prefix_highlight_show_copy_mode 'on'
 set -g @prefix_highlight_copy_mode_attr 'fg=colour73,bg=colour16'
 set -g status-right-length "100"
-set -g message-fg "colour16"
-setw -g window-status-fg "colour116"
-setw -g window-status-attr "none"
-setw -g window-status-activity-bg "colour16"
-setw -g window-status-activity-attr "none"
-setw -g window-status-activity-fg "colour116"
+#set -g message-fg "colour16" #Removed after tmux 2.9
+#setw -g window-status-fg "colour116" #Removed after tmux 2.9
+#setw -g window-status-attr "none" #Removed after tmux 2.9
+#setw -g window-status-activity-bg "colour16" #Removed after tmux 2.9
+#setw -g window-status-activity-attr "none" #Removed after tmux 2.9
+#setw -g window-status-activity-fg "colour116" #Removed after tmux 2.9
 setw -g window-status-separator ""
-setw -g window-status-bg "colour16"
+#setw -g window-status-bg "colour16" #Removed after tmux 2.9
 
 
 set -g status-left "#[fg=colour16,bg=colour116] #{cpu_icon} #[fg=colour116,bg=colour73,nobold,nounderscore,noitalics] #[fg=colour16,bg=colour73]#{battery_percentage} #{battery_icon}"

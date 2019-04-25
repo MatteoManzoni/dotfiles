@@ -98,7 +98,7 @@ set st=4 sw=4 et
 set shiftwidth=4
 set tabstop=4
 set noshowmode
-let &colorcolumn="80"
+" let &colorcolumn="80" "remove 80char limit
 :set guioptions-=m  "remove menu bar
 :set guioptions-=T  "remove toolbar
 :set guioptions-=r  "remove right-hand scroll bar
