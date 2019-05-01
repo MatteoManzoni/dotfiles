@@ -15,7 +15,7 @@ POWERLINE_BASH_SELECT=1
 
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
-alias cat='(( RANDOM % 4 == 0 )) && cat /home/matteo/.meow || cat'
+alias cat='(( RANDOM % 4 == 0 )) && cat $HOME/.meow || cat'
 export GREP_COLOR="1;32"
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
@@ -44,18 +44,18 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
-export CLASSPATH=".:/home/matteo/Programs/Class/*"
-PATH_UNI="/home/matteo/Documents/Università/Programmazione/Classi/*"
+export CLASSPATH=".:$HOME/Programs/Class/*"
+PATH_UNI="$HOME/Documents/Università/Programmazione/Classi/*"
 export CLASSPATH="$CLASSPATH:$PATH_UNI"
 
-export PATH="$PATH:/home/matteo/Programs/flutter/bin"
-export ANDROID_SDK_ROOT="/home/matteo/Programs/android-sdk/"
+export PATH="$PATH:$HOME/Programs/flutter/bin"
+export ANDROID_SDK_ROOT="$HOME/Programs/android-sdk/"
 export ANDROID_HOME="$ANDROID_SDK_ROOT"
 export PATH="$PATH:$ANDROID_HOME"
 export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:/home/matteo/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
-export PYTHONPATH="$PYTHONPATH:/home/matteo/.vim/bundle/ropevim/:/home/matteo/.vim/bundle/ropemode/:/home/matteo/.vim/bundle/rope/"
+export PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/:$HOME/.vim/bundle/ropemode/:$HOME/.vim/bundle/rope/"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 
 export EDITOR=vim
