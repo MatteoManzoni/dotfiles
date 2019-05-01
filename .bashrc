@@ -56,6 +56,7 @@ export PATH="$PATH:$GOPATH/bin"
 export PATH="$PATH:/home/matteo/.local/bin"
 
 export PYTHONPATH="$PYTHONPATH:/home/matteo/.vim/bundle/ropevim/:/home/matteo/.vim/bundle/ropemode/:/home/matteo/.vim/bundle/rope/"
+export PYTHONSTARTUP="$HOME/.pythonrc"
 
 export EDITOR=vim
 
