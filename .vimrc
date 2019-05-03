@@ -120,6 +120,10 @@ let g:NERDTreeDirArrows=0
 cd ~/Documents
 map <F2> :NERDTreeToggle<CR>
 
+" ==== SPELL
+map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F7> :setlocal spell! spelllang=it<CR>
+
 " ==== Rope python autocomplete
 let ropevim_vim_completion = 1
 let ropevim_extended_complete = 1
