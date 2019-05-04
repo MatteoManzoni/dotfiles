@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Great day</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <div id="search">
+        <input id="search-field" type="text" name="search-field" onkeypress="return search(event)"/>
+    </div>
+    <div class="container">
+        <div id="clock"></div>
+        <div class="weather-container">
+            <div class="row">
+                <img src="" id="weather-icon" class="inline-icon" style="width:1.5em;height:1.5em;"></img>
+                <div id="weather-description" class="inline"></div>
+                <div class="inline">-</div>
+                <div id="temp" class="inline"></div>
+            </div>
+        </div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title">Daily</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://gitlab.com/" target="_blank">Gitlab</a>
+                    <a class="bookmark" href="https://wiki.archlinux.org/" target="_blank">ArchWiki</a>
+                    <a class="bookmark" href="https://github.com/" target="_blank">Github</a>
+                    <a class="bookmark" href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Wiki Random</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Work</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://per.elmec.com" target="_blank">Per</a>
+                    <a class="bookmark" href="https://owa.elmec.it" target="_blank">OWA Inbox</a>
+                    <a class="bookmark" href="https://www.exploit-db.com/">Exploit DB</a>
+                    <a class="bookmark" href="https://access.redhat.com/errata/#/">RHEL Errata</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+            <div class="bookmark-title">Reddit</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://www.reddit.com/r/unixporn" target="_blank">/r/unixporn</a>
+                    <a class="bookmark" href="https://www.reddit.com/r/linuxmasterrace" target="_blank">/r/linuxMR</a>
+
+                    <a class="bookmark" href="https://www.reddit.com/r/MechanicalKeyboards" target="_blank">/r/MK</a>
+                   <a class="bookmark" href="https://www.reddit.com/r/dankmemes" target="_blank">/r/dankmemes</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="cat-container">
+            <div class="row">
+                <div id="cat-fact" class="inline"></div>
+            </div>
+        </div>
+    </div>
+<script src="scripts.js" type="text/javascript"></script>
+</body>
+</html>
