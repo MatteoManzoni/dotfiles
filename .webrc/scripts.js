@@ -29,7 +29,7 @@ window.onload = () => {
 function GetCatFact() {
     let xhr = new XMLHttpRequest();
     // Request to get cat fact
-    xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://catfact.ninja/fact?max_length=100');
+    xhr.open('GET', 'https://cors-anywhere.herokuapp.com/https://catfact.ninja/fact?max_length=140');
     xhr.onload = () => {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
