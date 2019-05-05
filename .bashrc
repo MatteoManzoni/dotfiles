@@ -13,6 +13,10 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
+if [ -f "$HOME/.scripts/bash.command-not-found"  ]; then
+    source "$HOME/.scripts/bash.command-not-found"
+fi
+
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias cat='(( RANDOM % 4 == 0 )) && cat $HOME/.meow || cat'
