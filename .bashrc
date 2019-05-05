@@ -12,13 +12,13 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
-if [ -f "$HOME/.scripts/bash.command-not-found"  ]; then
-    source "$HOME/.scripts/bash.command-not-found"
+if [ -f "~/.scripts/bash.command-not-found"  ]; then
+    source "~/.scripts/bash.command-not-found"
 fi
 
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
-alias cat='(( RANDOM % 4 == 0 )) && cat $HOME/.meow || cat'
+alias cat='(( RANDOM % 4 == 0 )) && cat ~/.meow || cat'
 export GREP_COLOR="1;32"
 export LESS=-R
 export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
@@ -46,8 +46,8 @@ man() {
     command man "$@"
 }
 
-export PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/:$HOME/.vim/bundle/ropemode/:$HOME/.vim/bundle/rope/"
-export PYTHONSTARTUP="$HOME/.pythonrc"
+export PYTHONPATH="$PYTHONPATH:~/.vim/bundle/ropevim/:~/.vim/bundle/ropemode/:~/.vim/bundle/rope/"
+export PYTHONSTARTUP="~/.pythonrc"
 
 export EDITOR=vim
 
