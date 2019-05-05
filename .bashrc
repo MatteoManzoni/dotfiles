@@ -12,9 +12,9 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
-if [ -f "~/.scripts/bash.command-not-found"  ]; then
-    source "~/.scripts/bash.command-not-found"
-fi
+
+[[ -f ~/.scripts/bash.command-not-found ]] && . ~/.scripts/bash.command-not-found
+
 
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'

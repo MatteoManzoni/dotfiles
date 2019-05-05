@@ -2,8 +2,6 @@
 # ~/.bash_profile
 #
 
-
-
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 [[ -f ~/.exportsrc ]] && . ~/.exportsrc
