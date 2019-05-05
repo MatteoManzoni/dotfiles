@@ -24,10 +24,10 @@
     - [Kvantum Themes engine](https://github.com/tsujan/Kvantum/tree/master/Kvantum "Kvantum Theme Engine")
 
 
-- ### Installation:
-    - Satisfy every aforementioned dependency 
-    - Backup any conflicting dotfile in your home directory
-    - `git clone https://gitlab.com/MatteoManzoni/dotfiles.git ~/`
-    - If everything is setup correctly login and logout
-    - Enjoy
+### Installation:
+- Satisfy every aforementioned dependency 
+- Backup any conflicting dotfile in your home directory
+- `git clone https://gitlab.com/MatteoManzoni/dotfiles.git ~/`
+- If everything is setup correctly login and logout
+- Enjoy
 
