@@ -27,7 +27,7 @@
 - ### Install:
     - Satisfy every aforementioned dependency 
     - Backup any conflicting dotfile in your home directory
-    - `git clone https://gitlab.com/MatteoManzoni/dotfiles.git $HOME`
+    - `git clone https://gitlab.com/MatteoManzoni/dotfiles.git ~/`
     - If everything is setup correctly login and logout
     - Enjoy
 
