@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 powerline-daemon -q
@@ -31,8 +30,6 @@ export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto -v'
-export VAGRANT_DEFAULT_PROVIDER="libvirt"
-export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
@@ -48,16 +45,6 @@ man() {
     LESS_TERMCAP_us=$'\e[01;32m' \
     command man "$@"
 }
-export CLASSPATH=".:$HOME/Programs/Class/*"
-PATH_UNI="$HOME/Documents/Università/Programmazione/Classi/*"
-export CLASSPATH="$CLASSPATH:$PATH_UNI"
-
-export PATH="$PATH:$HOME/Programs/flutter/bin"
-export ANDROID_SDK_ROOT="$HOME/Programs/android-sdk/"
-export ANDROID_HOME="$ANDROID_SDK_ROOT"
-export PATH="$PATH:$ANDROID_HOME"
-export PATH="$PATH:$GOPATH/bin"
-export PATH="$PATH:$HOME/.local/bin"
 
 export PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/:$HOME/.vim/bundle/ropemode/:$HOME/.vim/bundle/rope/"
 export PYTHONSTARTUP="$HOME/.pythonrc"
@@ -70,8 +57,6 @@ HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 shopt -s cmdhist
 PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_COMMAND"
-
-
 
 #piknik related
 pikparamcopy() {
@@ -92,8 +77,6 @@ pikdircopy() {
 }
 
 alias pikdirpaste='piknik -paste | tar xzpvf -'
-
-
 
 # TMUX POWER
 if [[ $DISPLAY ]]; then

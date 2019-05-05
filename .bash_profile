@@ -2,12 +2,12 @@
 # ~/.bash_profile
 #
 
-export GOPATH=$HOME/Programs/go
-export VAGRANT_HOME=$HOME/Documents/Virtual\ Machines/KVM/Vagrant/
-export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1
-export PATH="$PATH:$HOME/Programs/bin"
+
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+
+[[ -f ~/.exportsrc ]] && . ~/.exportsrc
+
 
 if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
     exec startx -- -keeptty > ~/.xorg.log 2>&1
