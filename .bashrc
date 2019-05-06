@@ -56,7 +56,10 @@ alias pikmove='piknik -move'
 alias pikclean='piknik -copy < /dev/null'
 alias pikdirpaste='piknik -paste | tar xzpvf -'
 alias yt='youtube-viewer --player=vlc'
+alias ytdl='youtube-dl --add-metadata -ic'
+alias ytdla='youtube-d --add-metadata -xic'
 alias vdif='vim -d'
+alias rld='source ~/.bashrc'
 
 
 # Funktions
