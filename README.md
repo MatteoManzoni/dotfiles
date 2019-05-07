@@ -21,9 +21,9 @@
 - [Vi IMproved](https://github.com/vim/vim "VIM")
 - [VIM Plugin Manager](https://github.com/VundleVim/Vundle.vim "Vundle") (*every other plugin will be downloaded on the first plugin update*)
 - [Kvantum Themes engine](https://github.com/tsujan/Kvantum/tree/master/Kvantum "Kvantum Theme Engine")
-- [Highlight](http://www.andre-simon.de/doku/highlight/highlight.php "cat but with awesome highlighting") (*option but some aliases will brek*) 
-- [YouTubeViewer](https://github.com/trizen/youtube-viewer "YouTube in your terminal") (*option but some aliases will brek*)
-- [YouTubeDL](https://ytdl-org.github.io/youtube-dl/index.html "Download YouTube videos from the terminal") (*option but some aliases will brek*)
+- [Highlight](http://www.andre-simon.de/doku/highlight/highlight.php "cat but with awesome highlighting") (*option but some aliases will break*) 
+- [YouTubeViewer](https://github.com/trizen/youtube-viewer "YouTube in your terminal") (*option but some aliases will break*)
+- [YouTubeDL](https://ytdl-org.github.io/youtube-dl/index.html "Download YouTube videos from the terminal") (*option but some aliases will break*)
 
 
 ### Installation
