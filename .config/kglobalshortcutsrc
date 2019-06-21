@@ -1,6 +1,7 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
 switch-to-activity-=none,none,
+switch-to-activity-23fc69d4-3da5-4b35-a49b-a00cc3177722=none,none,Switch to activity "Angry Jobs"
 switch-to-activity-6a05d740-d01f-432a-bf38-adc0524bd599=none,none,Switch to activity "GUI  Things"
 switch-to-activity-bf6b8979-5be9-4a12-94ad-9b195ae55a79=none,none,Switch to activity "TMUX FTW"
 
@@ -68,7 +69,7 @@ run command on clipboard contents=Alt+Shift+F2,Alt+Shift+F2,Run Command on clipb
 
 [ksmserver]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown,none,Halt Without Confirmation
-Lock Session=Meta+L\tScreensaver,Ctrl+Alt+L\tScreensaver,Lock Session
+Lock Session=Meta+L\tScreensaver,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,none,Log Out
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del,none,Log Out Without Confirmation
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,none,Reboot Without Confirmation
@@ -91,7 +92,7 @@ MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
 Remove Window From Group=none,none,Remove Window From Group
 Setup Window Shortcut=none,none,Setup Window Shortcut
-Show Desktop=Meta+Alt+F2,none,Show Desktop
+Show Desktop=Meta+Alt+F2,Meta+D,Show Desktop
 ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Show Desktop Grid
 Suspend Compositing=Alt+Shift+F12,Alt+Shift+F12,Suspend Compositing
 Switch One Desktop Down=none,none,Switch One Desktop Down
