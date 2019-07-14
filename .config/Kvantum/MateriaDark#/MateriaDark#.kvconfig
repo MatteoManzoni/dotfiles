@@ -58,16 +58,17 @@ tooltip_delay=-1
 tree_branch_line=true
 no_window_pattern=false
 opaque=kaffeine,kmplayer,subtitlecomposer,kdenlive,vlc,smplayer,smplayer2,avidemux,avidemux2_qt4,avidemux3_qt4,avidemux3_qt5,kamoso,QtCreator,VirtualBox,trojita,dragon,digikam
-reduce_window_opacity=15
+reduce_window_opacity=25
 respect_DE=true
 scrollable_menu=false
 submenu_delay=250
 no_inactiveness=false
-reduce_menu_opacity=10
+reduce_menu_opacity=20
 contrast=1.00
 dialog_button_layout=0
 intensity=1.00
 saturation=1.00
+shadowless_popup=false
 
 [GeneralColors]
 window.color=#282828
@@ -91,10 +92,10 @@ link.visited.color=#9E4FFF
 progress.indicator.text.color=#dfdfdf
 
 [Hacks]
-transparent_ktitle_label=false
+transparent_ktitle_label=true
 transparent_dolphin_view=true
-transparent_pcmanfm_sidepane=false
-blur_translucent=false
+transparent_pcmanfm_sidepane=true
+blur_translucent=true
 transparent_menutitle=true
 respect_darkness=true
 kcapacitybar_as_progressbar=true
@@ -106,7 +107,7 @@ lxqtmainmenu_iconsize=16
 normal_default_pushbutton=true
 single_top_toolbar=true
 tint_on_mouseover=0
-transparent_pcmanfm_view=false
+transparent_pcmanfm_view=true
 no_selection_tint=true
 transparent_arrow_button=true
 middle_click_scroll=false
