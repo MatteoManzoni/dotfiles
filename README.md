@@ -1,16 +1,10 @@
-# `My Dotfiles :D`
+# `My Dotfiles (very broken due to migration to OSx)` 
 ## *You know, just some days of my life gone forever*  
-
 
 ### Table of contents
 - [Table of contents](#table-of-contents)
-    - [End Result](#end-result)
     - [Dependencies](#dependencies)
     - [Installation](#installation)
-
-
-### End Result
-![screen in-use](.screenshots/latest_screenshot.png)
 
 
 ### Dependencies
