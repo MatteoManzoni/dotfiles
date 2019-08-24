@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# TMUX POWER
+if [[ -z "$TMUX" ]] ;then
+    ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+    if [[ -z "$ID" ]] ;then # if not available create a new one
+        exec tmux new-session
+    else
+        exec tmux attach-session -t "$ID" # if available attach to it
+    fi
+fi
+
+# GO POWERLINE
+#function _update_ps1() {
+#    PS1="$($GOPATH/bin/powerline-go -error $?)"
+#}
+#
+#if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
+
+# PYTHON POWERLINE
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /Users/matteo/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
