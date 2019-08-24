@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if ip route | grep default | head -1 | grep -q "tun"; then
-    echo ""
-else
-    echo "😨"
-fi
-
