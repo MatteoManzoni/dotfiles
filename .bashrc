@@ -9,6 +9,7 @@ source ~/.promptrc
 
 # BASH OPT
 stty -ixon
+shopt -s autocd
 shopt -s histappend
 shopt -s cmdhist
 
@@ -42,6 +43,8 @@ alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias cat='(( RANDOM % 4 == 0 )) && cat ~/.meow || cat'
 
+alias git-setup-personal="git config --local user.email \"manzoni.matteo@mailfence.com\" && git config --local user.signingkey 1759D5E5C62E8101"
+alias git-setup-work="git config --local user.email \"matteo.manzoni@elmec.it\" && git config --local user.signingkey 8891A3B2F7F0E3AE"
 
 man() {
     LESS_TERMCAP_md=$'\e[01;31m' \
