@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Some library and misc function 
+
+sensors() {
+    echo "Temps:"
+    echo -e "\tCPU: $(osx-cpu-temp -c)"
+    echo -e "\tGPU: $(osx-cpu-temp -g)"
+    echo "Fans:"
+    echo -e "\t$(osx-cpu-temp -f)"
+}
+
+battery() {
+    pmset -g batt | egrep "([0-9]+\%).*" -o | awk -F '[" ";]' '{print $1" "$5}'
+}
+
+function gui_password {
+    if [[ -z $1 ]]; then
+        gui_prompt="Password:"
+    else
+        gui_prompt="$1"
+    fi
+    PW=$(osascript <<EOF
+    tell application "System Events"
+        activate
+        text returned of (display dialog "${gui_prompt}" default answer "" with hidden answer)
+    end tell
+EOF
+    )
+
+}
