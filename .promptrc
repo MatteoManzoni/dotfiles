@@ -10,17 +10,67 @@ if [[ -z "$TMUX" ]] ;then
     fi
 fi
 
-# GO POWERLINE
-#function _update_ps1() {
-#    PS1="$($GOPATH/bin/powerline-go -error $?)"
-#}
-#
-#if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-#    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-#fi
+PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 
-# PYTHON POWERLINE
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /Users/matteo/Library/Python/2.7/lib/python/site-packages/powerline/bindings/bash/powerline.sh
+__prompt_command() {
+    PS1=""
+
+    local RCol='\[\e[96m\]' 	# Right color
+    local Reset='\[\e[0m\]'
+    local Gre='\[\e[32m\]'
+    local Red='\[\e[31m\]'
+    local BYel='\[\e[1;33m\]'
+    local BBlu='\[\e[1;34m\]'
+    local BPur='\[\e[1;95m\]'
+
+    # Prompt prefix
+    PS1="${RCol}\n┌─[\`if [ \$? = 0 ]; then echo ${Gre}✔${RCol}; else echo ${Red}✘${RCol}; fi\`]───[${BYel}\u${RCol}]───[${BBlu}\W${RCol}]$(parse_git_branch)\n└───▶${Reset} "
+
+}
+
+# get current branch in git repo
+function parse_git_branch() {
+    BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+	if [ ! "${BRANCH}" == "" ]
+	then
+        STAT=$(parse_git_dirty)
+		echo "───[${BYel}${BRANCH}${BPur}${STAT}${RCol}]"
+	else
+		echo ""
+	fi
+}
+
+# get current status of git repo
+function parse_git_dirty {
+    status=$(git status 2>&1 | tee)
+    dirty=$(echo -n "${status}" 2> /dev/null | grep "modified:" &> /dev/null; echo "$?")
+    untracked=$(echo -n "${status}" 2> /dev/null | grep "Untracked files" &> /dev/null; echo "$?")
+    ahead=$(echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?")
+    newfile=$(echo -n "${status}" 2> /dev/null | grep "new file:" &> /dev/null; echo "$?")
+    renamed=$(echo -n "${status}" 2> /dev/null | grep "renamed:" &> /dev/null; echo "$?")
+    deleted=$(echo -n "${status}" 2> /dev/null | grep "deleted:" &> /dev/null; echo "$?")
+	bits=''
+	if [ "${renamed}" == "0" ]; then
+		bits=">${bits}"
+	fi
+	if [ "${ahead}" == "0" ]; then
+		bits="*${bits}"
+	fi
+	if [ "${newfile}" == "0" ]; then
+		bits="+${bits}"
+	fi
+	if [ "${untracked}" == "0" ]; then
+		bits="?${bits}"
+	fi
+	if [ "${deleted}" == "0" ]; then
+		bits="x${bits}"
+	fi
+	if [ "${dirty}" == "0" ]; then
+		bits="!${bits}"
+	fi
+	if [ ! "${bits}" == "" ]; then
+		echo " ${bits}"
+	else
+		echo ""
+	fi
+}
