@@ -14,7 +14,7 @@ battery() {
     pmset -g batt | egrep "([0-9]+\%).*" -o | awk -F '[" ";]' '{print $1" "$5}'
 }
 
-function gui_password {
+gui_password() {
     if [[ -z $1 ]]; then
         gui_prompt="Password:"
     else
@@ -28,4 +28,10 @@ function gui_password {
 EOF
     )
 
+}
+
+vps_vnc_connect() {
+    IP="$(keychain -p -s VPS_VNC)"
+
+    open vnc://"$IP"
 }
