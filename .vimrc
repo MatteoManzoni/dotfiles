@@ -73,6 +73,8 @@ Plugin 'vim-airline/vim-airline-themes'
 " ==== PLUGIN THEMES
 Plugin 'morhetz/gruvbox'
 Plugin '0x7A69_dark.vim'
+Plugin 'nikitavoloboev/vim-monokai-night'
+Plugin 'ayu-theme/ayu-vim'
 
 " ==== TMUX INTEGRATION
 " Plugin 'edkolev/tmuxline.vim' " Only to update the tmuxline
@@ -81,7 +83,8 @@ call vundle#end()
 filetype plugin indent on
 
 " ==== Colors and other basic settings
-colorscheme 0x7A69_dark
+"colorscheme 0x7A69_dark
+colorscheme 0x7A69_dark_personalized
 highlight Comment cterm=italic gui=italic
 set guifont=Space\ Mono\ for\ Powerline:h10
 let g:airline_powerline_fonts = 1
