@@ -5,7 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-source ~/.promptrc
+# Some source to keep all clean
+[[ -f ~/.promptrc ]] && . ~/.promptrc
+[[ -f ~/.macosrc ]] && . ~/.macosrc
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # BASH OPT
 stty -ixon
@@ -37,11 +40,12 @@ alias ls='ls -G'
 alias ll='ls -l -G -v'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias kdesu='kdesu -n'
 alias hcat='highlight --out-format=ansi'
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
 alias cat='(( RANDOM % 4 == 0 )) && cat ~/.meow || cat'
+
+alias updatedb='sudo /usr/libexec/locate.updatedb'
 
 alias git-setup-personal="git config --local user.email \"manzoni.matteo@mailfence.com\" && git config --local user.signingkey 1759D5E5C62E8101"
 alias git-setup-work="git config --local user.email \"matteo.manzoni@elmec.it\" && git config --local user.signingkey 8891A3B2F7F0E3AE"
