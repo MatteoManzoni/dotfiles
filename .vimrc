@@ -120,7 +120,7 @@ let NERDTreeIgnore = ['__pycache__', '\.pyc$', '\.o$', '\.so$', '\.a$', '\.swp',
 let NERDTreeShowHidden=1
 let g:NERDTreeWinPos="left"
 let g:NERDTreeDirArrows=0
-cd ~/Documents
+cd ~/
 map <F2> :NERDTreeToggle<CR>
 
 " ==== SPELL
