@@ -20,16 +20,16 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "return_or_enter",
+                                    "key_code": "t",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_control"
+                                            "left_option"
                                         ]
                                     }
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "osascript -e 'tell app \"iTerm2\"' -e 'create window with default profile' -e activate -e end"
+                                        "shell_command": "open -aiterm"
                                     }
                                 ],
                                 "type": "basic"
