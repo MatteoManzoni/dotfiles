@@ -15,16 +15,16 @@ PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
 __prompt_command() {
     PS1=""
 
-    local RCol='\[\e[96m\]' 	# Right color
-    local Reset='\[\e[0m\]'
+    local RCol='\[\e[0m\]'
     local Gre='\[\e[32m\]'
     local Red='\[\e[31m\]'
     local BYel='\[\e[1;33m\]'
+    local BCya='\[\e[1;96m\]'
     local BBlu='\[\e[1;34m\]'
     local BPur='\[\e[1;95m\]'
 
     # Prompt prefix
-    PS1="${RCol}\n┌─[\`if [ \$? = 0 ]; then echo ${Gre}✔${RCol}; else echo ${Red}✘${RCol}; fi\`]───[${BYel}\u${RCol}]───[${BBlu}\W${RCol}]$(parse_git_branch)\n└───▶${Reset} "
+    PS1="${RCol}\n┌─[\`if [ \$? = 0 ]; then echo ${Gre}✔${RCol}; else echo ${Red}✘${RCol}; fi\`]───[${BYel}\u${RCol}]───[${BCya}\W${RCol}]$(parse_git_branch)\n└───▶${RCol} "
 
 }
 
