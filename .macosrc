@@ -35,3 +35,5 @@ vps_vnc_connect() {
 
     open vnc://"$IP"
 }
+
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"

@@ -22,6 +22,7 @@
     {:des "Right Reload Ctrl-R" :rules [[:!Tr :!Cr :!Disabled]]}
     {:des "Right Reload F5" :rules [[:f5 :!Cr :!Disabled]]}
     {:des "Right New Tab" :rules [[:!Tt :!Ct :!Disabled]]}
+    {:des "Right New Tab" :rules [[:!TSt :!CSt :!Disabled]]}
     {:des "Right Find" :rules [[:!Tf :!Cf :!Disabled]]}
     {:des "Right Open" :rules [[:!To :!Co :!Disabled]]}
     {:des "Right New" :rules [[:!Tn :!Cn :!Disabled]]}
@@ -31,8 +32,8 @@
     {:des "Right Quit" :rules [[:!Tq :!Cq]]}
     {:des "Right Close windows" :rules [[:!Tw :!Cw :!Disabled]]}
     {:des "Right Lock" :rules [[:!Cl :!CTq]]}
-    {:des "Right PrintScreen Selection" :rules [[:!Sprint_screen :!C!S4]]}
-    {:des "Right PrintScreen" :rules [[:print_screen :!C!S3]]}
+    {:des "Right PrintScreen Selection" :rules [[:!Sprint_screen :!CS4]]}
+    {:des "Right PrintScreen" :rules [[:print_screen :!CS3]]}
     {:des "Right Browser open location" :rules [[:!Tl :!Cl :!Disabled]]}
     {:des "Right Back" :rules [[:!Oleft_arrow :!C!Sleft_arrow :!Disabled]]}
     {:des "Right Forward" :rules [[:!Oright_arrow :!C!Sright_arrow :!Disabled]]}
@@ -49,6 +50,9 @@
     {:des "Right Save Terminal" :rules [[:!TSs :!Cs :Terminals]]}
     {:des "Fullscreen" :rules [[:!Creturn_or_enter :!COSreturn_or_enter]]}
     {:des "Restore" :rules [[:!Cdelete_or_backspace :!COreturn_or_enter]]}
+    {:des "Print" :rules [[:!Tp :!TSp]]}
+    {:des "Preferences" :rules [[:!Cp :!Ccomma]]}
+
     ]
     
   :applications {
