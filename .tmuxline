@@ -30,7 +30,7 @@ setw -g window-status-separator ""
 
 set -g status-left "#[fg=colour16,bg=colour116] ⚐ #S #[fg=colour116,bg=colour73,nobold,nounderscore,noitalics] #[fg=colour16,bg=colour73]♥ #(/Users/matteo/.scripts/battery.sh) "
 
-set -g status-right "#[fg=colour116,bg=colour16,noblink]#{prefix_highlight}#[fg=colour116,bg=colour16,noblink]#{?window_zoomed_flag, ⚙,} #[fg=colour73,bg=colour16,nobold,nounderscore,noitalics]#[fg=colour16,bg=colour73] %Y-%m-%d  %I:%M%p #[fg=colour116,bg=colour73,nobold,nounderscore,noitalics]#[fg=colour16,bg=colour116] ↑#(/Users/matteo/.scripts/uptime.sh) #[fg=#d55d06,bg=colour116]#[fg=colour16,bg=#d55d06] #h #[fg=#d50306,bg=#d55d06]"
+set -g status-right "#[fg=colour116,bg=colour16,noblink]#{prefix_highlight}#[fg=colour116,bg=colour16,noblink]#{?window_zoomed_flag, Z,} #[fg=colour73,bg=colour16,nobold,nounderscore,noitalics]#[fg=colour16,bg=colour73] %Y-%m-%d  %I:%M%p #[fg=colour116,bg=colour73,nobold,nounderscore,noitalics]#[fg=colour16,bg=colour116] ↑#(/Users/matteo/.scripts/uptime.sh) #[fg=#d55d06,bg=colour116]#[fg=colour16,bg=#d55d06] #h #[fg=#d50306,bg=#d55d06]"
 
 setw -g window-status-format "#[fg=colour73,bg=colour16,nobold,nounderscore,noitalics]#{?#{==:#{window_index},1},,}#[fg=colour116,bg=colour16] #I #[fg=colour116,bg=colour16] #W "
 
