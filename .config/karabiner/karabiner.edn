@@ -7,7 +7,10 @@
     {:des "Left Command R Open Reminders"  :rules [[:!Cr "open -areminders"]]} 
     {:des "Left Command F Open Reeder"  :rules [[:!Cf "open -areeder"]]}
     {:des "Left Command E Open Mail"  :rules [[:!Ce "open -amail"]]}
-    {:des "Left Command \\ Open "  :rules [[:!Cbackslash "open -abitwarden"]]}
+    {:des "Left Command \\ Open Bitwarden"  :rules [[:!Cbackslash "open -abitwarden"]]}
+    {:des "Left Command W Open Calendar"  :rules [[:!Cw "open -acalendar"]]}
+    {:des "Left Command A Open Contacts"  :rules [[:!Ca "open -acontacts"]]}
+    {:des "Left Command / Open Telegram"  :rules [[:!Cslash "open -atelegram"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
