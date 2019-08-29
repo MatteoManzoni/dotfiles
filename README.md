@@ -21,6 +21,7 @@
 - [Highlight](http://www.andre-simon.de/doku/highlight/highlight.php "cat but with awesome highlighting")
 - [M-Cli](https://github.com/rgcr/m-cli "MacOs admin cli")
 - [Duti](https://github.com/moretension/duti/ "Change MacOS default apps")
+- [Cascadea](https://cascadea.app "Dark theme all the things")
 
 ### Installation
 
