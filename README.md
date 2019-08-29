@@ -7,8 +7,10 @@
 ### Table of contents
 
 - [Table of contents](#table-of-contents)
-  - [Dependencies](#dependencies)
+  - [Dependencies](#dependencies--useful-stuff-i-use)
   - [Installation](#installation)
+  - [Karabiner Shortcuts](#karabiner-shortcuts)
+  - [System Shortcuts](#system-shortcuts)
 
 ### Dependencies & Useful stuff i use
 
@@ -44,6 +46,9 @@
 | Command F | Open Reeder |
 | Command E | Open Mail |
 | Command \ | Open Bitwarden |
+| Command W | Open Calendar |
+| Command A | Open Contacts |
+| Command / | Open Telegram |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
