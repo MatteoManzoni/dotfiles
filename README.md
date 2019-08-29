@@ -72,8 +72,8 @@
 | Ctrl - | Browser zoom - |
 | Command -> | Snap Right |
 | Command <- | Snap Left |
-| Command Return | Current window full screen |
-| Command Backspace | Restore current window |
+| Command Return | Current window full screen (Hypervisors too) |
+| Command Backspace | Restore current window (Hypervisors use Command Return again) |
 | Command -> | Snap Right |
 | Ctrl P | Print |
 | Command P | Preferences |
@@ -81,6 +81,7 @@
 | Ctrl D | Show bookmarks panel |
 | Command D | Show Desktop |
 | Ctrl Option D | Add to reading list |
+| Ctrl Option | Ungrab input from guest |
 
 ## System shortcuts
 
