@@ -4,6 +4,10 @@
     {:des "Left Command T Open iTerm2"  :rules [[:!Ct "open -aiterm"]]}
     {:des "Left Command B Open Safari"  :rules [[:!Cb "open -asafari"]]}
     {:des "Left Command C Open Code"  :rules [[:!Cc "open -t"]]}
+    {:des "Left Command R Open Reminders"  :rules [[:!Cr "open -areminders"]]} 
+    {:des "Left Command F Open Reeder"  :rules [[:!Cf "open -areeder"]]}
+    {:des "Left Command E Open Mail"  :rules [[:!Ce "open -amail"]]}
+    {:des "Left Command \\ Open "  :rules [[:!Cbackslash "open -abitwarden"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
@@ -101,14 +105,16 @@
       "^com\\.googlecode\\.iterm2$"
       "^com\\.devolutions\\.remotedesktopmanager\\.free$"
       "^co\\.zeit\\.hyperterm$"
-      "^co\\.zeit\\.hyper$"  
+      "^co\\.zeit\\.hyper$"
+      "^io\\.alacritty$" 
       ]
     :Terminals [
       "^com\\.apple\\.Terminal$"
       "^com\\.googlecode\\.iterm2$"
       "^com\\.devolutions\\.remotedesktopmanager\\.free$"
       "^co\\.zeit\\.hyperterm$"
-      "^co\\.zeit\\.hyper$" 
+      "^co\\.zeit\\.hyper$"
+      "^io\\.alacritty$"
       ]
     :Browsers [
       "^org\\.mozilla\\.firefox$"
