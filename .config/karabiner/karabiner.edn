@@ -1,35 +1,37 @@
 {
   :main [
     {:des "Caps lock to Left Control" :rules [[:caps_lock :left_control]]}
-    {:des "Left Option T Open iTerm2"  :rules [[:!Ot "open -aiterm"]]}
-    {:des "Left OPtion B Open Safari"  :rules [[:!Ob "open -asafari"]]}
+    {:des "Left Command T Open iTerm2"  :rules [[:!Ct "open -aiterm"]]}
+    {:des "Left Command B Open Safari"  :rules [[:!Cb "open -asafari"]]}
+    {:des "Left Command C Open Code"  :rules [[:!Cc "open -t"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
     {:des "Right Save" :rules [[:!Ts :!Cs :!Disabled]]}
-    {:des "Right Home" :rules [[:home :!Cleft_arrow :!Browsers_disabled]]}
-    {:des "Right End" :rules [[:end :!Cright_arrow :!Browsers_disabled]]}
-    {:des "Right Home_Browsers" :rules [[:home :!Cleft_arrow :Browsers]]}
-    {:des "Right End_Browsers" :rules [[:end :!Cright_arrow :Browsers]]}
-    {:des "Right Home_Laptop" :rules [[:!Fleft_arrow :!Cleft_arrow :!Browsers_disabled]]}
-    {:des "Right End_Laptop" :rules [[:!Fright_arrow :!Cright_arrow :!Browsers_disabled]]}
-    {:des "Right Home_Browsers_Laptop" :rules [[:!Fleft_arrow :!Cleft_arrow :Browsers]]}
-    {:des "Right End_Browsers_Laptop" :rules [[:!Fright_arrow :!Cright_arrow :Browsers]]}
-    {:des "Right Reload F5_Laptop" :rules [[:!Ff5 :!Cr :!Disabled]]}
+    {:des "Right Home" :rules [[:home :!Cleft_arrow [:!Disabled :!Browsers :HHKB]]]}
+    {:des "Right End" :rules [[:end :!Cright_arrow [:!Disabled :!Browsers :HHKB]]]}
+    {:des "Right Home_Browsers" :rules [[:home :!Cleft_arrow :Browsers :HHKB]]}
+    {:des "Right End_Browsers" :rules [[:end :!Cright_arrow :Browsers :HHKB]]}
+    {:des "Right Home_Laptop" :rules [[:!Fleft_arrow :!Cleft_arrow [:!Disabled :!Browsers :INTEGRATED]]]}
+    {:des "Right End_Laptop" :rules [[:!Fright_arrow :!Cright_arrow [:!Disabled :!Browsers :INTEGRATED]]]}
+    {:des "Right Home_Browsers_Laptop" :rules [[:!Fleft_arrow :!Cleft_arrow [:Browsers :INTEGRATED]]]}
+    {:des "Right End_Browsers_Laptop" :rules [[:!Fright_arrow :!Cright_arrow [:Browsers :INTEGRATED]]]}
+    {:des "Right Reload F5_Laptop" :rules [[:!Ff5 :!Cr [:!Disabled :INTEGRATED]]]}
     {:des "Right Redo" :rules [[:!TSz :!CSz :!Disabled]]}
     {:des "Right Undo" :rules [[:!Tz :!Cz :!Disabled]]}
     {:des "Right Select All" :rules [[:!Ta :!Ca :!Disabled]]}
     {:des "Right Reload Ctrl-R" :rules [[:!Tr :!Cr :!Disabled]]}
-    {:des "Right Reload F5" :rules [[:f5 :!Cr :!Disabled]]}
+    {:des "Right Reload F5" :rules [[:f5 :!Cr [:!Debuggers :!Disabled :HHKB]]]}
     {:des "Right New Tab" :rules [[:!Tt :!Ct :!Disabled]]}
     {:des "Right New Tab" :rules [[:!TSt :!CSt :!Disabled]]}
     {:des "Right Find" :rules [[:!Tf :!Cf :!Disabled]]}
     {:des "Right Open" :rules [[:!To :!Co :!Disabled]]}
     {:des "Right New" :rules [[:!Tn :!Cn :!Disabled]]}
-    {:des "Right Vold" :rules [[:!Tb :!Cb :!Disabled]]}
+    {:des "Right Bold" :rules [[:!Tb :!Cb [:!Disabled :!Browsers]]]}
     {:des "Right Italic" :rules [[:!Ti :!Ci :!Disabled]]}
     {:des "Right Underline" :rules [[:!Tu :!Cu :!Disabled]]}
     {:des "Right Quit" :rules [[:!Tq :!Cq]]}
+    {:des "Hide" :rules [[:!Th :!Ch]]}
     {:des "Right Close windows" :rules [[:!Tw :!Cw :!Disabled]]}
     {:des "Right Lock" :rules [[:!Cl :!CTq]]}
     {:des "Right PrintScreen Selection" :rules [[:!Sprint_screen :!CS4]]}
@@ -52,6 +54,22 @@
     {:des "Restore" :rules [[:!Cdelete_or_backspace :!COreturn_or_enter]]}
     {:des "Print" :rules [[:!Tp :!TSp]]}
     {:des "Preferences" :rules [[:!Cp :!Ccomma]]}
+    {:des "Add Bookmark" :rules [[:!TSd :!Cd :Browsers]]}
+    {:des "Add to Reading List" :rules [[:!TOd :!CSd :Browsers]]}
+    {:des "Show Desktop" :rules [[:!Cd :!CTSd]]}
+    {:des "Show Bookmarks" :rules [[:!Td :!CSOd :Browsers]]}
+    ;;{:des "F1" :rules [[:f1 :display_brightness_decrement]]}
+    ;;{:des "F2" :rules [[:f2 :display_brightness_increment]]}
+    ;;{:des "F3" :rules [[:f3 :illumination_decrement]]}
+    ;;{:des "F4" :rules [[:f4 :illumination_increment]]}
+    ;;{:des "F5" :rules [[:f5 :f5]]}
+    ;;{:des "F6" :rules [[:f6 :mission_control]]}
+    ;;{:des "F7" :rules [[:f7 :rewind]]}
+    ;;{:des "F8" :rules [[:f8 :play_or_pause]]}
+    ;;{:des "F9" :rules [[:f9 :fastforward]]}
+    ;;{:des "F10" :rules [[:f10 :mute]]}
+    ;;{:des "F11" :rules [[:f11 :volume_decrement]]}
+    ;;{:des "F12" :rules [[:f12 :volume_increment]]}
 
     ]
     
@@ -98,38 +116,14 @@
       "^org\\.chromium\\.Chromium$"
       "^com\\.google\\.Chrome\\.canary$"
       "^com\\.apple\\.Safari$"]
-    :Browsers_disabled [
-      "^com\\.microsoft\\.rdc$"
-      "^com\\.microsoft\\.rdc\\.mac$"
-      "^com\\.microsoft\\.rdc\\.osx\\.beta$"
-      "^net\\.sf\\.cord$"
-      "^com\\.thinomenon\\.RemoteDesktopConnection$"
-      "^com\\.itap-mobile\\.qmote$"
-      "^com\\.nulana\\.remotixmac$"
-      "^com\\.p5sys\\.jump\\.mac\\.viewer$"
-      "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$"
-      "^com\\.teamviewer\\.TeamViewer$"
-      "^com\\.vmware\\.horizon$"
-      "^com\\.2X\\.Client\\.Mac$"
-      "^com\\.vmware\\.fusion$"
-      "^com\\.vmware\\.horizon$"
-      "^com\\.vmware\\.view$"
-      "^com\\.parallels\\.desktop$"
-      "^com\\.parallels\\.vm$"
-      "^com\\.parallels\\.desktop\\.console$"
-      "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
-      "^com\\.vmware\\.proxyApp\\."
-      "^com\\.parallels\\.winapp\\."
-      "^com\\.apple\\.Terminal$"
-      "^com\\.googlecode\\.iterm2$"
-      "^com\\.devolutions\\.remotedesktopmanager\\.free$"
-      "^co\\.zeit\\.hyperterm$"
-      "^co\\.zeit\\.hyper$"                 
-      "^org\\.mozilla\\.firefox$"
-      "^org\\.mozilla\\.firefoxdeveloperedition$"
-      "^com\\.google\\.Chrome$"
-      "^org\\.chromium\\.Chromium$"
-      "^com\\.google\\.Chrome\\.canary$"
-      "^com\\.apple\\.Safari$"]
-    }
+    :Debuggers [
+      "^com\\.microsoft\\.VSCode$"
+    ]
+  }
+  :devices {
+    :HHKB [{:vendor_id 2131 :product_id 256}]
+    :INTEGRATED [
+      {:vendor_id 1452  :product_id 34304}
+      {:vendor_id 1452 :product_id 636}]
+  } 
 }
