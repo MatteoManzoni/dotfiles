@@ -51,7 +51,7 @@
     {:des "Right Copy Terminal" :rules [[:!TSc :!Cc :Terminals]]} 
     {:des "Right Paste Terminal" :rules [[:!TSv :!Cv :Terminals]]}
     {:des "Right Cut Terminal" :rules [[:!TSx :!Cx :Terminals]]}
-    {:des "Fullscreen" :rules [[:!Creturn_or_enter :!COSreturn_or_enter]]}
+    {:des "Fullscreen" :rules [[:!Creturn_or_enter :!COSreturn_or_enter :!Hypervisors]]}
     {:des "Restore" :rules [[:!Cdelete_or_backspace :!COreturn_or_enter]]}
     {:des "Print" :rules [[:!Tp :!TSp]]}
     {:des "Preferences" :rules [[:!Cp :!Ccomma]]}
@@ -59,7 +59,8 @@
     {:des "Add to Reading List" :rules [[:!TOd :!CSd :Browsers]]}
     {:des "Show Desktop" :rules [[:!Cd :!CTSd]]}
     {:des "Show Bookmarks panel" :rules [[:!Td :!CSOd :Browsers]]}
-    {:des "Exit guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
+    {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
+    {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
     ]
     
   :applications {
