@@ -41,6 +41,9 @@
 | Command T | Open Term |
 | Command B | Open Safari |
 | Command C | Open VSCode |
+| Command F | Open Reeder |
+| Command E | Open Mail |
+| Command \ | Open Bitwarden |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
