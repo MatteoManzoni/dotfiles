@@ -6,13 +6,11 @@
 
 ### Table of contents
 
-- [`My Dotfiles (Fresh from OSx migration)`](#my-dotfiles-fresh-from-osx-migration)
-  - [*You know, just some days of my life gone forever*](#you-know-just-some-days-of-my-life-gone-forever)
-    - [Table of contents](#table-of-contents)
+- [Table of contents](#table-of-contents)
     - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
     - [Installation](#installation)
     - [Karabiner Shortcuts](#karabiner-shortcuts)
-  - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
+    - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
 
 ### Dependencies & Useful stuff i use
 
