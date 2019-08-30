@@ -7,10 +7,10 @@
 ### Table of contents
 
 - [Table of contents](#table-of-contents)
-    - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
-    - [Installation](#installation)
-    - [Karabiner Shortcuts](#karabiner-shortcuts)
-    - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
+  - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
+  - [Installation](#installation)
+  - [Karabiner Shortcuts](#karabiner-shortcuts)
+  - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
 
 ### Dependencies & Useful stuff i use
 
