@@ -51,7 +51,8 @@
 | Command A | Open Contacts |
 | Command / | Open Telegram |
 | Command N | Open Notes |
-| Command H | Open Help file |
+| Command H | Open Shortcut file |
+| Command ' | Open Slack |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
