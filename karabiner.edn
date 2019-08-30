@@ -1,0 +1,144 @@
+{
+  :main [
+    {:des "Caps lock to Left Control" :rules [[:caps_lock :left_control]]}
+    {:des "Left Command T Open iTerm2"  :rules [[:!Ct "open -aiterm"]]}
+    {:des "Left Command S Open Safari"  :rules [[:!Cs "open -asafari"]]}
+    {:des "Left Command C Open Code"  :rules [[:!Cc "open -t"]]}
+    {:des "Left Command R Open Reminders"  :rules [[:!Cr "open -areminders"]]} 
+    {:des "Left Command F Open Reeder"  :rules [[:!Cf "open -areeder"]]}
+    {:des "Left Command E Open Mail"  :rules [[:!Ce "open -amail"]]}
+    {:des "Left Command \\ Open Bitwarden"  :rules [[:!Cbackslash "open -abitwarden"]]}
+    {:des "Left Command W Open Calendar"  :rules [[:!Cw "open -acalendar"]]}
+    {:des "Left Command A Open Contacts"  :rules [[:!Ca "open -acontacts"]]}
+    {:des "Left Command / Open Telegram"  :rules [[:!Cslash "open -atelegram"]]}
+    {:des "Left Command N Open Notes"  :rules [[:!Cn "open -anotes"]]}
+    {:des "Left Command H Open HelpFile"  :rules [[:!Ch "/usr/local/bin/mupdf-gl ~/.help.pdf"]]}
+    {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
+    {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
+    {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
+    {:des "Right Save" :rules [[:!Ts :!Cs :!Disabled]]}
+    {:des "Right Home" :rules [[:home :!Cleft_arrow [:!Disabled :!Browsers :HHKB]]]}
+    {:des "Right End" :rules [[:end :!Cright_arrow [:!Disabled :!Browsers :HHKB]]]}
+    {:des "Right Home_Browsers" :rules [[:home :!Cleft_arrow :Browsers :HHKB]]}
+    {:des "Right End_Browsers" :rules [[:end :!Cright_arrow :Browsers :HHKB]]}
+    {:des "Right Home_Laptop" :rules [[:!Fleft_arrow :!Cleft_arrow [:!Disabled :!Browsers :INTEGRATED]]]}
+    {:des "Right End_Laptop" :rules [[:!Fright_arrow :!Cright_arrow [:!Disabled :!Browsers :INTEGRATED]]]}
+    {:des "Right Home_Browsers_Laptop" :rules [[:!Fleft_arrow :!Cleft_arrow [:Browsers :INTEGRATED]]]}
+    {:des "Right End_Browsers_Laptop" :rules [[:!Fright_arrow :!Cright_arrow [:Browsers :INTEGRATED]]]}
+    {:des "Right Reload F5_Laptop" :rules [[:!Ff5 :!Cr [:!Disabled :!Debuggers :INTEGRATED]]]}
+    {:des "Right Redo" :rules [[:!TSz :!CSz :!Disabled]]}
+    {:des "Right Undo" :rules [[:!Tz :!Cz :!Disabled]]}
+    {:des "Right Select All" :rules [[:!Ta :!Ca :!Disabled]]}
+    {:des "Right Reload Ctrl-R" :rules [[:!Tr :!Cr :!Disabled]]}
+    {:des "Right Reload F5" :rules [[:f5 :!Cr [:!Debuggers :!Disabled :HHKB]]]}
+    {:des "Right New Tab" :rules [[:!Tt :!Ct :!Disabled]]}
+    {:des "Right Reopen list closed Tab" :rules [[:!TSt :!CSt :!Disabled]]}
+    {:des "Right Find" :rules [[:!Tf :!Cf :!Disabled]]}
+    {:des "Right Open" :rules [[:!To :!Co :!Disabled]]}
+    {:des "Right New" :rules [[:!Tn :!Cn :!Disabled]]}
+    {:des "Right New Modifier" :rules [[:!TSn :!CSn :!Disabled]]}
+    {:des "Right Bold" :rules [[:!Tb :!Cb [:!Disabled :!Browsers]]]}
+    {:des "Right Italic" :rules [[:!Ti :!Ci :!Disabled]]}
+    {:des "Right Underline" :rules [[:!Tu :!Cu :!Disabled]]}
+    {:des "Right Quit" :rules [[:!Tq :!Cq]]}
+    {:des "Hide" :rules [[:!Th :!Ch]]}
+    {:des "Right Close windows" :rules [[:!Tw :!Cw :!Disabled]]}
+    {:des "Right Lock" :rules [[:!Cl :!CTq]]}
+    {:des "Right PrintScreen Selection" :rules [[:!Sprint_screen :!CS4 :!INTEGRATED]]}
+    {:des "Right PrintScreen" :rules [[:print_screen :!CS3 :!INTEGRATED]]}
+    {:des "Right PrintScreen Selection_Laptop" :rules [[:!FSi :!CS4 :INTEGRATED]]}
+    {:des "Right PrintScreen_Laptop" :rules [[:!Fi :!CS3 :INTEGRATED]]}
+    {:des "Right Browser open location" :rules [[:!Tl :!Cl :!Disabled]]}
+    {:des "Right Back" :rules [[:!Oleft_arrow :!C!Sleft_arrow :!Disabled]]}
+    {:des "Right Forward" :rules [[:!Oright_arrow :!C!Sright_arrow :!Disabled]]}
+    {:des "Right Ctrl-Del" :rules [[:!Tdelete_or_backspace :!Odelete_or_backspace]]}
+    {:des "Right Zoom Minus" :rules [[:!Thyphen :!Chyphen :!Disabled]]}
+    {:des "Right Zoom Minus Keypad" :rules [[:!Tkeypad_hyphen :!Ckeypad_hyphen :!Disabled]]}
+    {:des "Right Zoom Plus" :rules [[:!Tequal_sign :!Cequal_sign :!Disabled]]}
+    {:des "Right Zoom Plus" :rules [[:!Tkeypad_plus :!Ckeypad_plus :!Disabled]]}
+    {:des "Snap Right" :rules [[:!Cright_arrow :!CTright_arrow]]}
+    {:des "Snap Left" :rules [[:!Cleft_arrow :!CTleft_arrow]]}
+    {:des "Right Copy Terminal" :rules [[:!TSc :!Cc :Terminals]]} 
+    {:des "Right Paste Terminal" :rules [[:!TSv :!Cv :Terminals]]}
+    {:des "Right Cut Terminal" :rules [[:!TSx :!Cx :Terminals]]}
+    {:des "Fullscreen" :rules [[:!Creturn_or_enter :!COSreturn_or_enter :!Hypervisors]]}
+    {:des "Restore" :rules [[:!Cdelete_or_backspace :!COreturn_or_enter]]}
+    {:des "Print" :rules [[:!Tp :!TSp]]}
+    {:des "Preferences" :rules [[:!Cp :!Ccomma]]}
+    {:des "Add Bookmark" :rules [[:!TSd :!Cd :Browsers]]}
+    {:des "Add to Reading List" :rules [[:!TOd :!CSd :Browsers]]}
+    {:des "Show Desktop" :rules [[:!Cd :!CTSd]]}
+    {:des "Move Left Desktop" :rules [[:!Ccomma :!CTOcomma]]}
+    {:des "Move Right Desktop" :rules [[:!Cperiod :!CTOperiod]]}
+    {:des "Show Bookmarks panel" :rules [[:!Td :!CSOd :Browsers]]}
+    {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
+    {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
+    ]
+    
+  :applications {
+    :Hypervisors [
+      "^com\\.vmware\\.fusion$"
+      "^com\\.vmware\\.horizon$"
+      "^com\\.vmware\\.view$"
+      "^com\\.parallels\\.desktop$"
+      "^com\\.parallels\\.vm$"
+      "^com\\.parallels\\.desktop\\.console$"
+      "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+      "^com\\.vmware\\.proxyApp\\."
+      "^com\\.parallels\\.winapp\\."
+      ]
+    :Disabled [
+      "^com\\.microsoft\\.rdc$"
+      "^com\\.microsoft\\.rdc\\.mac$"
+      "^com\\.microsoft\\.rdc\\.osx\\.beta$"
+      "^net\\.sf\\.cord$"
+      "^com\\.thinomenon\\.RemoteDesktopConnection$"
+      "^com\\.itap-mobile\\.qmote$"
+      "^com\\.nulana\\.remotixmac$"
+      "^com\\.p5sys\\.jump\\.mac\\.viewer$"
+      "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web$"
+      "^com\\.teamviewer\\.TeamViewer$"
+      "^com\\.vmware\\.horizon$"
+      "^com\\.2X\\.Client\\.Mac$"
+      "^com\\.vmware\\.fusion$"
+      "^com\\.vmware\\.horizon$"
+      "^com\\.vmware\\.view$"
+      "^com\\.parallels\\.desktop$"
+      "^com\\.parallels\\.vm$"
+      "^com\\.parallels\\.desktop\\.console$"
+      "^org\\.virtualbox\\.app\\.VirtualBoxVM$"
+      "^com\\.vmware\\.proxyApp\\."
+      "^com\\.parallels\\.winapp\\."
+      "^com\\.apple\\.Terminal$"
+      "^com\\.googlecode\\.iterm2$"
+      "^com\\.devolutions\\.remotedesktopmanager\\.free$"
+      "^co\\.zeit\\.hyperterm$"
+      "^co\\.zeit\\.hyper$"
+      "^io\\.alacritty$" 
+      ]
+    :Terminals [
+      "^com\\.apple\\.Terminal$"
+      "^com\\.googlecode\\.iterm2$"
+      "^com\\.devolutions\\.remotedesktopmanager\\.free$"
+      "^co\\.zeit\\.hyperterm$"
+      "^co\\.zeit\\.hyper$"
+      "^io\\.alacritty$"
+      ]
+    :Browsers [
+      "^org\\.mozilla\\.firefox$"
+      "^org\\.mozilla\\.firefoxdeveloperedition$"
+      "^com\\.google\\.Chrome$"
+      "^org\\.chromium\\.Chromium$"
+      "^com\\.google\\.Chrome\\.canary$"
+      "^com\\.apple\\.Safari$"]
+    :Debuggers [
+      "^com\\.microsoft\\.VSCode$"
+    ]
+  }
+  :devices {
+    :HHKB [{:vendor_id 2131 :product_id 256}]
+    :INTEGRATED [
+      {:vendor_id 1452  :product_id 34304}
+      {:vendor_id 1452 :product_id 636}]
+  } 
+}

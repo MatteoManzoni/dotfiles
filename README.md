@@ -28,6 +28,7 @@
 - [M-Cli](https://github.com/rgcr/m-cli "MacOs admin cli")
 - [Duti](https://github.com/moretension/duti/ "Change MacOS default apps")
 - [Cascadea](https://cascadea.app "Dark theme all the things")
+- [MuPDF](https://mupdf.com "Lightweight PDF reader")
 
 ### Installation
 
@@ -52,6 +53,7 @@
 | Command A | Open Contacts |
 | Command / | Open Telegram |
 | Command N | Open Notes |
+| Command H | Open Help file |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
