@@ -2,7 +2,7 @@
   :main [
     {:des "Caps lock to Left Control" :rules [[:caps_lock :left_control]]}
     {:des "Left Command T Open iTerm2"  :rules [[:!Ct "open -aiterm"]]}
-    {:des "Left Command B Open Safari"  :rules [[:!Cb "open -asafari"]]}
+    {:des "Left Command S Open Safari"  :rules [[:!Cs "open -asafari"]]}
     {:des "Left Command C Open Code"  :rules [[:!Cc "open -t"]]}
     {:des "Left Command R Open Reminders"  :rules [[:!Cr "open -areminders"]]} 
     {:des "Left Command F Open Reeder"  :rules [[:!Cf "open -areeder"]]}
@@ -67,6 +67,8 @@
     {:des "Add Bookmark" :rules [[:!TSd :!Cd :Browsers]]}
     {:des "Add to Reading List" :rules [[:!TOd :!CSd :Browsers]]}
     {:des "Show Desktop" :rules [[:!Cd :!CTSd]]}
+    {:des "Move Left Desktop" :rules [[:!Ccomma :!CTOcomma]]}
+    {:des "Move Right Desktop" :rules [[:!Cperiod :!CTOperiod]]}
     {:des "Show Bookmarks panel" :rules [[:!Td :!CSOd :Browsers]]}
     {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
     {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
