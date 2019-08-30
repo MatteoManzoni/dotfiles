@@ -12,7 +12,7 @@
     - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
     - [Installation](#installation)
     - [Karabiner Shortcuts](#karabiner-shortcuts)
-  - [System shortcuts](#system-shortcuts)
+  - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
 
 ### Dependencies & Useful stuff i use
 
@@ -43,7 +43,7 @@
 | ------------- |:-------------:|
 | CapsLock      | Left Ctrl     |
 | Command T | Open Term |
-| Command B | Open Safari |
+| Command S | Open Safari |
 | Command C | Open VSCode |
 | Command F | Open Reeder |
 | Command E | Open Mail |
@@ -98,13 +98,13 @@
 | Ctrl Option D | Add to reading list |
 | Ctrl Option | Ungrab input from guest |
 
-## System shortcuts
+## System shortcuts (Mostly used to freeup some combos)
 
 | Key           | Do            |
 | ------------- |:-------------:|
 | Ctrl Shift Command D | Mission Control -> Show Desktop |
-| Command . | Mission Control -> Move right a space |
-| Command , | Mission Control -> Move left a space |
+| Ctrl Option Command . | Mission Control -> Move right a space |
+| Ctrl Option Command , | Mission Control -> Move left a space |
 | Ctrl Command P | App Shortcuts -> Print |
 | Opt Shift Command D | App Shortcut -> Hide Bookmarks |
 | Opt Shift Command D | App Shortcut -> Show Bookmarks |
