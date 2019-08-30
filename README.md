@@ -6,11 +6,13 @@
 
 ### Table of contents
 
-- [Table of contents](#table-of-contents)
-  - [Dependencies](#dependencies--useful-stuff-i-use)
-  - [Installation](#installation)
-  - [Karabiner Shortcuts](#karabiner-shortcuts)
-  - [System Shortcuts](#system-shortcuts)
+- [`My Dotfiles (Fresh from OSx migration)`](#my-dotfiles-fresh-from-osx-migration)
+  - [*You know, just some days of my life gone forever*](#you-know-just-some-days-of-my-life-gone-forever)
+    - [Table of contents](#table-of-contents)
+    - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
+    - [Installation](#installation)
+    - [Karabiner Shortcuts](#karabiner-shortcuts)
+  - [System shortcuts](#system-shortcuts)
 
 ### Dependencies & Useful stuff i use
 
@@ -49,6 +51,7 @@
 | Command W | Open Calendar |
 | Command A | Open Contacts |
 | Command / | Open Telegram |
+| Command N | Open Notes |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
@@ -68,6 +71,7 @@
 | Ctrl F | Find |
 | Ctrl O | Open |
 | Ctrl N | New |
+| Ctrl Shift N | New with modifier |
 | Ctrl B/I/U | Switch to Bold/Italic/Underlien |
 | Ctrl Q | Quit Program |
 | Ctrl H | Hide Window |
@@ -99,8 +103,8 @@
 | Key           | Do            |
 | ------------- |:-------------:|
 | Ctrl Shift Command D | Mission Control -> Show Desktop |
-| Command M | Mission Control -> Move right a space |
-| Command N | Mission Control -> Move left a space |
+| Command . | Mission Control -> Move right a space |
+| Command , | Mission Control -> Move left a space |
 | Ctrl Command P | App Shortcuts -> Print |
 | Opt Shift Command D | App Shortcut -> Hide Bookmarks |
 | Opt Shift Command D | App Shortcut -> Show Bookmarks |
