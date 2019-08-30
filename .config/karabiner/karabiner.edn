@@ -80,18 +80,18 @@
     {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
     {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
     
-    {:des "Remap Fn number to F<>" :rules [[:!F1 :f1 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F2 :f2 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F3 :f3 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F4 :f4 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F1 :display_brightness_decrement :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F2 :display_brightness_increment :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F3 :illumination_decrement :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F4 :illumination_increment :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F5 :!Cr :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F6 :f6 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F7 :f7 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F8 :f8 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F9 :f9 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F0 :f10 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!Fhyphen :f11 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!Fequal_sign :f12 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F6 :mission_control :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F7 :rewind :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F8 :play_or_pause :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F9 :fastforward :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F0 :volume_decrement :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!Fhyphen :mute :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!Fequal_sign :volume_increment :INTEGRATED]]}
     ]
     
   :applications {
