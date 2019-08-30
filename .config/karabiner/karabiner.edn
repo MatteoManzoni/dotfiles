@@ -81,7 +81,7 @@
     {:des "Remap Fn number to F<>" :rules [[:!F2 :f2 :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F3 :f3 :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F4 :f4 :INTEGRATED]]}
-    {:des "Remap Fn number to F<>" :rules [[:!F5 :f5 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F5 :!Cr :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F6 :f6 :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F7 :f7 :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F8 :f8 :INTEGRATED]]}
