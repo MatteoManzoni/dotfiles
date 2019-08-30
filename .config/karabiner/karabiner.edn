@@ -75,6 +75,19 @@
     {:des "Show Bookmarks panel" :rules [[:!Td :!CSOd :Browsers]]}
     {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
     {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
+    
+    {:des "Remap Fn number to F<>" :rules [[:!F1 :f1 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F2 :f2 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F3 :f3 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F4 :f4 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F5 :f5 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F6 :f6 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F7 :f7 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F8 :f8 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F9 :f9 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!F0 :f10 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!Fhyphen :f11 :INTEGRATED]]}
+    {:des "Remap Fn number to F<>" :rules [[:!Fequal_sign :f12 :INTEGRATED]]}
     ]
     
   :applications {
