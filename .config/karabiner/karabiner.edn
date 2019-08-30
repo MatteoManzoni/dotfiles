@@ -12,7 +12,7 @@
     {:des "Left Command A Open Contacts"  :rules [[:!Ca "open -acontacts"]]}
     {:des "Left Command / Open Telegram"  :rules [[:!Cslash "open -atelegram"]]}
     {:des "Left Command N Open Notes"  :rules [[:!Cn "open -anotes"]]}
-    {:des "Left Command H Open HelpFile"  :rules [[:!Ch "/usr/local/bin/mupdf-gl ~/.help.pdf"]]}
+    {:des "Left Command H Open Shortcut file"  :rules [[:!Ch "open ~/.config/karabiner/karabiner.edn"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
@@ -51,14 +51,16 @@
     {:des "Right Browser open location" :rules [[:!Tl :!Cl :!Disabled]]}
     {:des "Right Back" :rules [[:!Oleft_arrow :!C!Sleft_arrow :!Disabled]]}
     {:des "Right Forward" :rules [[:!Oright_arrow :!C!Sright_arrow :!Disabled]]}
-    {:des "Right Ctrl-Del" :rules [[:!Tdelete_or_backspace :!Odelete_or_backspace]]}
+    {:des "Right Ctrl-Del" :rules [[:!Tdelete_or_backspace :!Cdelete_or_backspace]]}
     {:des "Right Zoom Minus" :rules [[:!Thyphen :!Chyphen :!Disabled]]}
     {:des "Right Zoom Minus Keypad" :rules [[:!Tkeypad_hyphen :!Ckeypad_hyphen :!Disabled]]}
     {:des "Right Zoom Plus" :rules [[:!Tequal_sign :!Cequal_sign :!Disabled]]}
     {:des "Right Zoom Plus" :rules [[:!Tkeypad_plus :!Ckeypad_plus :!Disabled]]}
     {:des "Snap Right" :rules [[:!Cright_arrow :!CTright_arrow]]}
     {:des "Snap Left" :rules [[:!Cleft_arrow :!CTleft_arrow]]}
-    {:des "Right Copy Terminal" :rules [[:!TSc :!Cc :Terminals]]} 
+    {:des "Right Copy Terminal" :rules [[:!TSc :!Cc :Terminals]]}
+    {:des "Ctrl C in non terminal" :rules [[:!TSc :!Tc :!Terminals :!Disabled]]}
+    {:des "Ctrl L in non terminal" :rules [[:!TSl :!Tl :!Terminals :!Disabled]]}
     {:des "Right Paste Terminal" :rules [[:!TSv :!Cv :Terminals]]}
     {:des "Right Cut Terminal" :rules [[:!TSx :!Cx :Terminals]]}
     {:des "Fullscreen" :rules [[:!Creturn_or_enter :!COSreturn_or_enter :!Hypervisors]]}
