@@ -16,6 +16,7 @@
     {:des "Left Command Shift H Open README.md file"  :rules [[:!CSh "open ~/Projects/dotfiles/README.md"]]}
     {:des "Left Command ' Open Slack"  :rules [[:!Cquote "open -aslack"]]}
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
+    {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
