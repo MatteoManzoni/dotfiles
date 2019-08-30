@@ -11,6 +11,7 @@
     {:des "Left Command W Open Calendar"  :rules [[:!Cw "open -acalendar"]]}
     {:des "Left Command A Open Contacts"  :rules [[:!Ca "open -acontacts"]]}
     {:des "Left Command / Open Telegram"  :rules [[:!Cslash "open -atelegram"]]}
+    {:des "Left Command N Open Telegram"  :rules [[:!Cn "open -anotes"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
@@ -34,6 +35,7 @@
     {:des "Right Find" :rules [[:!Tf :!Cf :!Disabled]]}
     {:des "Right Open" :rules [[:!To :!Co :!Disabled]]}
     {:des "Right New" :rules [[:!Tn :!Cn :!Disabled]]}
+    {:des "Right New Modifier" :rules [[:!TSn :!CSn :!Disabled]]}
     {:des "Right Bold" :rules [[:!Tb :!Cb [:!Disabled :!Browsers]]]}
     {:des "Right Italic" :rules [[:!Ti :!Ci :!Disabled]]}
     {:des "Right Underline" :rules [[:!Tu :!Cu :!Disabled]]}
