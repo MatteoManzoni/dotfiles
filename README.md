@@ -57,6 +57,7 @@
 | Command Shift H | Open dotfile README |
 | Command ' | Open Slack |
 | Command ] | Open Textual |
+| Command V | Open Finder |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
