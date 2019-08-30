@@ -6,10 +6,12 @@
 
 ### Table of contents
 
-- [Table of contents](#table-of-contents)
-  - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
-  - [Installation](#installation)
-  - [Karabiner Shortcuts](#karabiner-shortcuts)
+- [`My Dotfiles (Fresh from OSx migration)`](#my-dotfiles-fresh-from-osx-migration)
+  - [*You know, just some days of my life gone forever*](#you-know-just-some-days-of-my-life-gone-forever)
+    - [Table of contents](#table-of-contents)
+    - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
+    - [Installation](#installation)
+    - [Karabiner Shortcuts](#karabiner-shortcuts)
   - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
 
 ### Dependencies & Useful stuff i use
@@ -52,7 +54,9 @@
 | Command / | Open Telegram |
 | Command N | Open Notes |
 | Command H | Open Shortcut file |
+| Command Shift H | Open dotfile README |
 | Command ' | Open Slack |
+| Command ] | Open Textual |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
