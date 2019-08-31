@@ -8,3 +8,4 @@ Useful commands:
 	-  keychain -u -s <service name> (retrive user from the keychain command line)
 	- ypull (pull but no README or LICENSE)
     - ypush (push and sync support repo)
+    - kextstat | grep -v com.apple (list non-apple kext)
