@@ -26,10 +26,6 @@ gll(){
     git clone "$(pbpaste)"
 }
 
-re(){
-  mv "$1" ~/.Trash
-}
-
 cfile(){
   cat $1 | pbcopy
 }
