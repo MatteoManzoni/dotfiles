@@ -11,8 +11,9 @@
     - [Table of contents](#table-of-contents)
     - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
     - [Installation](#installation)
+    - [Alias and functions](#alias-and-functions)
     - [Karabiner Shortcuts](#karabiner-shortcuts)
-  - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
+    - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
 
 ### Dependencies & Useful stuff i use
 
@@ -28,7 +29,6 @@
 - [M-Cli](https://github.com/rgcr/m-cli "MacOs admin cli")
 - [Duti](https://github.com/moretension/duti/ "Change MacOS default apps")
 - [Cascadea](https://cascadea.app "Dark theme all the things")
-- [MuPDF](https://mupdf.com "Lightweight PDF reader")
 
 ### Installation
 
@@ -38,9 +38,32 @@
 - If everything is setup correctly login and logout
 - Enjoy
 
+### Alias and functions
+
+| Command       | Do What       |
+| ------------- |:-------------:|
+| speedtest     | Run a speedtest |
+| myip          | Show public IP |
+| hcat          | Cat files syntax-highlighted |
+| cat           | Cat with a surprise |
+| updatedb      | Just updatedb  |
+| personal-git  | Setup git with personal info |
+| work-git      | Setup git with work info |
+| wtfpl         | Deploy wtpl license in current dir with my data |
+| gpl           | Deploy gpl license in current dir with my data |
+| mit           | Deploy mit license in current dir with my data |
+| man           | Just man but with colors |
+| ypull         | YADM pull but without ugly README or LICENSE file |
+| ypush         | YADM push but update also the support repository in ~/Projects |
+| gll           | Git clone repo in clipboard |
+| re            | Safer rm, move target to Trash |
+| cfile         | Copy file content to clipboard |
+| fl            | Find word(s) in current folder |
+| server        | Spin up a simple http server and open it in Safari |
+
 ### Karabiner Shortcuts
 
-| Key           | Do            |
+| Key           | Do What       |
 | ------------- |:-------------:|
 | CapsLock      | Left Ctrl     |
 | Command T | Open Term |
@@ -104,9 +127,9 @@
 | Ctrl Option D | Add to reading list |
 | Ctrl Option | Ungrab input from guest |
 
-## System shortcuts (Mostly used to freeup some combos)
+### System shortcuts (Mostly used to freeup some combos)
 
-| Key           | Do            |
+| Key           | Do What       |
 | ------------- |:-------------:|
 | Ctrl Shift Command D | Mission Control -> Show Desktop |
 | Ctrl Option Command . | Mission Control -> Move right a space |
