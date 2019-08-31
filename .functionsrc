@@ -17,6 +17,11 @@ ypull() {
     [ -f ~/LICENSE ] && rm ~/LICENSE
 }
 
+ypush() {
+    yadm push
+    git -C /Users/matteo/Projects/dotfiles/ pull --rebase
+}
+
 gll(){
     git clone "$(pbpaste)"
 }
