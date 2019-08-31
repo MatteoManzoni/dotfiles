@@ -1,0 +1,10 @@
+Useful commands:
+	- pandoc -t beamer <name>.md -o <name>.pdf (transform markdown to pdf)
+	- /usr/libexec/PlistBuddy -c 'Print CFBundleIdentifier' <path to app> (Get bundle from app)
+	- duti -s <bundle> <extension/prefix> all (set default app for extension/prefix)
+	- git remote set-url --add --push origin <URL> (add remote url, even multiple)
+	- security add-generic-password -s  <service name> -a <user> -w <password> (save password to keychain from the command line)
+	- keychain -p -s <service name> (retrive password from the keychain command line)
+	-  keychain -u -s <service name> (retrive user from the keychain command line)
+	- ypull (pull but no README or LICENSE)
+    - ypush (push and sync support repo)
