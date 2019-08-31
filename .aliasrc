@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias ls='ls -G'
 alias ll='ls -l -G -v'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
@@ -12,3 +14,6 @@ alias updatedb='sudo /usr/libexec/locate.updatedb'
 alias git-setup-personal="git config --local user.email \"manzoni.matteo@mailfence.com\" && git config --local user.signingkey 1759D5E5C62E8101"
 alias git-setup-work="git config --local user.email \"matteo.manzoni@elmec.it\" && git config --local user.signingkey 8891A3B2F7F0E3AE"
 
+alias wtfpl='license-up wtfpl Matteo Manzoni'
+alias gpl='license-up gpl3'
+alias mit='license-up mit Matteo Manzoni matteo-manzoni.it'
