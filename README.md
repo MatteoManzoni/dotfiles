@@ -6,21 +6,32 @@
 
 ### Table of contents
 
-- [`My Dotfiles (Fresh from OSx migration)`](#my-dotfiles-fresh-from-osx-migration)
-  - [*You know, just some days of my life gone forever*](#you-know-just-some-days-of-my-life-gone-forever)
-    - [Table of contents](#table-of-contents)
-    - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
-    - [Installation](#installation)
-    - [Alias and functions](#alias-and-functions)
-    - [Karabiner Shortcuts](#karabiner-shortcuts)
-    - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
+- [Table of contents](#table-of-contents)
+  - [Rationale](#rationale)
+  - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
+  - [Installation](#installation)
+  - [Alias and functions](#alias-and-functions)
+  - [Karabiner Shortcuts](#karabiner-shortcuts)
+  - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
+
+### Rationale
+
+#### *Have a confy but effective environment on my personal/work laptop*
+
+Coming from a Linux-only life I wanted the same shortcuts and user experience so:
+    - Command is used to administer system level functions
+    - Control is used to administer application/window level functions
+    - Opt & Shift are used as modifier to create new sub shortcuts on the same group (open/close/add bookmarks on D but with different modifier)
+    - The Caps key is mapped to Control to match my HHKB
+    - The aim is to use less and less mouse everyday
+    - Ease up my workflow with anything that bash can offer
 
 ### Dependencies & Useful stuff i use
 
 - [Homebrew](https://brew.sh "Homebrew packet manager")
 - [TMux](https://github.com/tmux/tmux "TMux")
 - [Alacritty](https://github.com/jwilm/alacritty "Good rust terminal, too much impact on battery")
-- [Alacritty](https://github.com/gnachman/iTerm2 "A terminal that just works")
+- [ITerm2](https://github.com/gnachman/iTerm2 "A terminal that just works")
 - [TPM](https://github.com/tmux-plugins/tpm "TMux Plugin Manager")
 - [Karabiner](https://github.com/tekezo/Karabiner-Elements "Karabiner-Elements")
 - [Goku](https://github.com/yqrashawn/GokuRakuJoudo "Goku Karabiner DSL")
