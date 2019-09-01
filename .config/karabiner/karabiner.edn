@@ -1,7 +1,7 @@
 {
   :main [
     {:des "Caps lock to Left Control" :rules [[:caps_lock :left_control]]}
-    {:des "Left Command T Open iTerm2"  :rules [[:!Ct "open -aiterm"]]}
+    {:des "Left Command T Open Alacritty"  :rules [[:!Ct "open -aalacritty"]]}
     {:des "Left Command S Open Safari"  :rules [[:!Cs "open -asafari"]]}
     {:des "Left Command C Open Code"  :rules [[:!Cc "open -t"]]}
     {:des "Left Command R Open Reminders"  :rules [[:!Cr "open -areminders"]]} 
