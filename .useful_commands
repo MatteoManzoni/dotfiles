@@ -9,3 +9,5 @@ Useful commands:
 	- ypull (pull but no README or LICENSE)
     - ypush (push and sync support repo)
     - kextstat | grep -v com.apple (list non-apple kext)
+	- defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO (Fix smoothing Alacritty 1)
+   	- defaults -currentHost write -globalDomain AppleFontSmoothing -int 2 (Fix smoothing Alacritty 2)
