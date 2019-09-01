@@ -96,6 +96,7 @@ Coming from a Linux-only life I wanted the same shortcuts and user experience so
 | Command ' | Open Slack |
 | Command ] | Open Textual |
 | Command V | Open Finder |
+| Command M | Open Music |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
@@ -120,6 +121,7 @@ Coming from a Linux-only life I wanted the same shortcuts and user experience so
 | Ctrl Q | Quit Program |
 | Ctrl H | Hide Window |
 | Ctrl W | Close Window |
+| Ctrl M | Minimize Window |
 | Command L | Lock Session |
 | PrintScreen | Full Screen Screenshot |
 | Shift PrintScreen | Selection Screenshot |
