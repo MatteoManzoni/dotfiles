@@ -14,6 +14,7 @@
     {:des "Left Command N Open Notes"  :rules [[:!Cn "open -anotes"]]}
     {:des "Left Command H Open Shortcut file"  :rules [[:!Ch "open ~/.config/karabiner/karabiner.edn"]]}
     {:des "Left Command Shift H Open README.md file"  :rules [[:!CSh "open ~/Projects/dotfiles/README.md"]]}
+    {:des "Left Command Option H Open Useful command file"  :rules [[:!COh "open ~/.useful_commands"]]}
     {:des "Left Command ' Open Slack"  :rules [[:!Cquote "open -aslack"]]}
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
     {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}
@@ -79,7 +80,6 @@
     {:des "Show Bookmarks panel" :rules [[:!Td :!CSOd :Browsers]]}
     {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
     {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
-    
     {:des "Remap Fn number to F<>" :rules [[:!F1 :display_brightness_decrement :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F2 :display_brightness_increment :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F3 :illumination_decrement :INTEGRATED]]}
@@ -134,6 +134,7 @@
       "^co\\.zeit\\.hyperterm$"
       "^co\\.zeit\\.hyper$"
       "^io\\.alacritty$" 
+      "^net\\.kovidgoysl\\.kitty$"
       ]
     :Terminals [
       "^com\\.apple\\.Terminal$"
@@ -142,6 +143,8 @@
       "^co\\.zeit\\.hyperterm$"
       "^co\\.zeit\\.hyper$"
       "^io\\.alacritty$"
+      "^net\\.kovidgoyal\\.kitty$"
+      
       ]
     :Browsers [
       "^org\\.mozilla\\.firefox$"
