@@ -18,6 +18,7 @@
     {:des "Left Command ' Open Slack"  :rules [[:!Cquote "open -aslack"]]}
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
     {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}
+    {:des "Left Command M Open Music" :rules [[:!Cm "open -aitunes"]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
@@ -48,6 +49,7 @@
     {:des "Right Quit" :rules [[:!Tq :!Cq]]}
     {:des "Hide" :rules [[:!Th :!Ch]]}
     {:des "Right Close windows" :rules [[:!Tw :!Cw :!Disabled]]}
+    {:des "Right Minimize" :rules [[:!Tm :!Cm]]}
     {:des "Right Lock" :rules [[:!Cl :!CTq]]}
     {:des "Right PrintScreen Selection" :rules [[:!Sprint_screen :!CS4 :!INTEGRATED]]}
     {:des "Right PrintScreen" :rules [[:print_screen :!CS3 :!INTEGRATED]]}
