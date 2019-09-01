@@ -18,4 +18,4 @@ alias wtfpl='license-up wtfpl Matteo Manzoni'
 alias gpl='license-up gpl3'
 alias mit='license-up mit Matteo Manzoni matteo-manzoni.it'
 
-
+alias top='top -o cpu'
