@@ -19,12 +19,13 @@
 #### *Have a confy but effective environment on my personal/work laptop*
 
 Coming from a Linux-only life I wanted the same shortcuts and user experience so:
-    - Command is used to administer system level functions
-    - Control is used to administer application/window level functions
-    - Opt & Shift are used as modifier to create new sub shortcuts on the same group (open/close/add bookmarks on D but with different modifier)
-    - The Caps key is mapped to Control to match my HHKB
-    - The aim is to use less and less mouse everyday
-    - Ease up my workflow with anything that bash can offer
+
+- Command is used to administer system level functions
+- Control is used to administer application/window level functions
+- Opt & Shift are used as modifier to create new sub shortcuts on the same group (open/close/add bookmarks on D but with different modifier)
+- The Caps key is mapped to Control to match my HHKB
+- The aim is to use less and less mouse everyday
+- Ease up my workflow with anything that bash can offer
 
 ### Dependencies & Useful stuff i use
 
