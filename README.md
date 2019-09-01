@@ -19,7 +19,8 @@
 
 - [Homebrew](https://brew.sh "Homebrew packet manager")
 - [TMux](https://github.com/tmux/tmux "TMux")
-- [Alacritty](https://github.com/jwilm/alacritty "Rust terminal with very low CPU impact")
+- [Alacritty](https://github.com/jwilm/alacritty "Good rust terminal, too much impact on battery")
+- [Alacritty](https://github.com/gnachman/iTerm2 "A terminal that just works")
 - [TPM](https://github.com/tmux-plugins/tpm "TMux Plugin Manager")
 - [Karabiner](https://github.com/tekezo/Karabiner-Elements "Karabiner-Elements")
 - [Goku](https://github.com/yqrashawn/GokuRakuJoudo "Goku Karabiner DSL")
@@ -68,7 +69,7 @@
 | Key           | Do What       |
 | ------------- |:-------------:|
 | CapsLock      | Left Ctrl     |
-| Command T | Open Term |
+| Command T | Open iTerm |
 | Command S | Open Safari |
 | Command C | Open VSCode |
 | Command F | Open Reeder |
@@ -139,3 +140,7 @@
 | Ctrl Command P | App Shortcuts -> Print |
 | Opt Shift Command D | App Shortcut -> Hide Bookmarks |
 | Opt Shift Command D | App Shortcut -> Show Bookmarks |
+| Command Ctrl ADown | Mission Control -> Application Windows |
+| Command Ctrl AUp | Mission Control -> Mission Control |
+| Command Opt Tab | Keyboard -> Move focus to the active or next window |
+| Command ; | Mission Control -> Show Notification Center |
