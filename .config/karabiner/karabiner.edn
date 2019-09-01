@@ -1,7 +1,7 @@
 {
   :main [
     {:des "Caps lock to Left Control" :rules [[:caps_lock :left_control]]}
-    {:des "Left Command T Open Alacritty"  :rules [[:!Ct "open -aalacritty"]]}
+    {:des "Left Command T Open iTerm"  :rules [[:!Ct "open -aiterm"]]}
     {:des "Left Command S Open Safari"  :rules [[:!Cs "open -asafari"]]}
     {:des "Left Command C Open Code"  :rules [[:!Cc "open -t"]]}
     {:des "Left Command R Open Reminders"  :rules [[:!Cr "open -areminders"]]} 
@@ -68,8 +68,6 @@
     {:des "Ctrl L in non terminal" :rules [[:!TSl :!Tl :!Terminals :!Disabled]]}
     {:des "Right Paste Terminal" :rules [[:!TSv :!Cv :Terminals]]}
     {:des "Right Cut Terminal" :rules [[:!TSx :!Cx :Terminals]]}
-    {:des "Fullscreen" :rules [[:!Creturn_or_enter :!COSreturn_or_enter :!Hypervisors]]}
-    {:des "Restore" :rules [[:!Cdelete_or_backspace :!COreturn_or_enter]]}
     {:des "Print" :rules [[:!Tp :!TSp]]}
     {:des "Preferences" :rules [[:!Cp :!Ccomma]]}
     {:des "Add Bookmark" :rules [[:!TSd :!Cd :Browsers]]}
@@ -79,7 +77,7 @@
     {:des "Move Right Desktop" :rules [[:!Cperiod :!CTOperiod]]}
     {:des "Show Bookmarks panel" :rules [[:!Td :!CSOd :Browsers]]}
     {:des "Ungrab guest" :rules [[:!Tleft_option :!Tleft_command :Hypervisors]]}
-    {:des "Fullscreen guest" :rules [[:!Creturn_or_enter :!TCf :Hypervisors]]}
+    {:des "Fullscreen/restore" :rules [[:!Cdelete_or_backspace :!TCf]]}
     {:des "Remap Fn number to F<>" :rules [[:!F1 :display_brightness_decrement :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F2 :display_brightness_increment :INTEGRATED]]}
     {:des "Remap Fn number to F<>" :rules [[:!F3 :illumination_decrement :INTEGRATED]]}
