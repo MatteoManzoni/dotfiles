@@ -19,7 +19,7 @@ ypull() {
 
 ypush() {
     yadm push
-    git -C /Users/matteo/Projects/dotfiles/ pull --rebase
+    git -C /Users/matteo/Projects/Personal/dotfiles pull --rebase
 }
 
 gll(){
