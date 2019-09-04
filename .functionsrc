@@ -30,7 +30,7 @@ cfile(){
   cat $1 | pbcopy
 }
 
-re(){
+trash(){
   mv "$@" ~/.Trash
 }
 
