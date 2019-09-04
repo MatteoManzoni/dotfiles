@@ -19,6 +19,7 @@
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
     {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}
     {:des "Left Command M Open Music" :rules [[:!Cm "open -aitunes"]]}
+    {:des "Left Command J Open Jabber Search menu" :rules [[:!Cj :!CTj]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
     {:des "Right Paste" :rules [[:!Tv :!Cv :!Disabled]]}
     {:des "Right Cut" :rules [[:!Tx :!Cx :!Disabled]]}
