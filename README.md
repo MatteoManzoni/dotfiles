@@ -6,13 +6,16 @@
 
 ### Table of contents
 
-- [Table of contents](#table-of-contents)
-  - [Rationale](#rationale)
-  - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
-  - [Installation](#installation)
-  - [Alias and functions](#alias-and-functions)
-  - [Karabiner Shortcuts](#karabiner-shortcuts)
-  - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
+- [`My Dotfiles (Fresh from OSx migration)`](#my-dotfiles-fresh-from-osx-migration)
+  - [*You know, just some days of my life gone forever*](#you-know-just-some-days-of-my-life-gone-forever)
+    - [Table of contents](#table-of-contents)
+    - [Rationale](#rationale)
+      - [*Have a confy but effective environment on my personal/work laptop*](#have-a-confy-but-effective-environment-on-my-personalwork-laptop)
+    - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
+    - [Installation](#installation)
+    - [Alias and functions](#alias-and-functions)
+    - [Karabiner Shortcuts](#karabiner-shortcuts)
+    - [System shortcuts (Mostly used to freeup some combos)](#system-shortcuts-mostly-used-to-freeup-some-combos)
 
 ### Rationale
 
@@ -93,10 +96,12 @@ Coming from a Linux-only life I wanted the same shortcuts and user experience so
 | Command N | Open Notes |
 | Command H | Open Shortcut file |
 | Command Shift H | Open dotfile README |
+| Command Opt H | Open useful commands file |
 | Command ' | Open Slack |
 | Command ] | Open Textual |
 | Command V | Open Finder |
 | Command M | Open Music |
+| Command J | Open Jabber search menu |
 | Ctrl C | Copy |
 | Ctrl V | Paste |
 | Ctrl Shift C | Copy in terminal applications |
