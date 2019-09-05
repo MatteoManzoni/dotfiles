@@ -19,3 +19,5 @@ alias gpl='license-up gpl3'
 alias mit='license-up mit Matteo Manzoni matteo-manzoni.it'
 
 alias top='top -o cpu'
+
+alias pwssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'

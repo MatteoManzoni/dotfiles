@@ -60,10 +60,10 @@
     {:des "Right Back" :rules [[:!Oleft_arrow :!C!Sleft_arrow :!Disabled]]}
     {:des "Right Forward" :rules [[:!Oright_arrow :!C!Sright_arrow :!Disabled]]}
     {:des "Right Ctrl-Del" :rules [[:!Tdelete_or_backspace :!Cdelete_or_backspace]]}
-    {:des "Right Zoom Minus" :rules [[:!Thyphen :!Chyphen :!Disabled]]}
-    {:des "Right Zoom Minus Keypad" :rules [[:!Tkeypad_hyphen :!Ckeypad_hyphen :!Disabled]]}
-    {:des "Right Zoom Plus" :rules [[:!Tequal_sign :!Cequal_sign :!Disabled]]}
-    {:des "Right Zoom Plus" :rules [[:!Tkeypad_plus :!Ckeypad_plus :!Disabled]]}
+    {:des "Right Zoom Minus" :rules [[:!Thyphen :!Chyphen]]}
+    {:des "Right Zoom Minus Keypad" :rules [[:!Tkeypad_hyphen :!Ckeypad_hyphen]]}
+    {:des "Right Zoom Plus" :rules [[:!Tequal_sign :!Cequal_sign]]}
+    {:des "Right Zoom Plus" :rules [[:!Tkeypad_plus :!Ckeypad_plus]]}
     {:des "Snap Right" :rules [[:!Cright_arrow :!CTright_arrow]]}
     {:des "Snap Left" :rules [[:!Cleft_arrow :!CTleft_arrow]]}
     {:des "Right Copy Terminal" :rules [[:!TSc :!Cc :Terminals]]}
