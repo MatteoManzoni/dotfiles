@@ -81,3 +81,7 @@ elmvpn() {
         echo -e "This command accept:\n\tstart -> start anyconnect VPN trojan and track is PID\n\tclean -> kills the trojan and all anyconnect related things (GUI quit preferred)"
     fi
 }
+
+hide() {
+    osascript -e "tell application \"Finder\"" -e "set visible of process \"$1\" to false" -e "end tell"
+}
