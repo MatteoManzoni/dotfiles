@@ -35,3 +35,51 @@ vps_vnc_connect() {
 }
 
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+elmvpn() {
+    local PIDFILE_ELMVPN="/tmp/.elmvpn.pid"
+    
+    if [ "$#" -eq 1 ]; then
+        if [ -f "$PIDFILE_ELMVPN" ]; then
+            local PID_ELMVPN="$(/bin/cat $PIDFILE_ELMVPN 2>/dev/null)"
+        fi
+        if [ "$1" == "start" ];then
+            if [ "$PID_ELMVPN" == "" ]; then
+                sudo /opt/cisco/anyconnect/bin/vpnagentd
+                local PID_ELMVPN=$(ps aux | grep vpnagentd | grep -v grep | awk '{print $2}')
+                echo "PID:"
+                echo "$PID_ELMVPN" | sudo tee $PIDFILE_ELMVPN
+                sudo -u matteo open -a Cisco\ AnyConnect\ Secure\ Mobility\ Client
+            else
+                echo "Anyconnect trojan vpnagentd already running"
+                echo "Just start anyconnect gui or even better, kill the trojan! (PID: $PID_ELMVPN)"
+            fi
+        elif [ "$1" == "clean" ]; then
+            if [ "$PID_ELMVPN" != "" ]; then
+                PID_GUI_ELMVPN="$(ps aux | grep 'Cisco AnyConnect Secure Mobility Client' | grep -v grep | awk '{print $2}')"
+                kill "$PID_GUI_ELMVPN"
+                sudo kill "$PID_ELMVPN"
+                sudo rm -f "$PIDFILE_ELMVPN"
+                echo "100% Trojan Free"
+            else
+                echo "Missing process PID, maybe already killed?"
+            fi
+        fi
+    else
+        echo -e "This command accept:\n\tstart -> start anyconnect VPN trojan and track is PID\n\tclean -> kills the trojan and all anyconnect related things (GUI quit preferred)"
+    fi
+}
+
+hide() {
+    osascript -e "tell application \"Finder\"" -e "set visible of process \"$1\" to false" -e "end tell"
+}
+
+TB_connect() {
+    osascript -e "tell application \"Tunnelblick\"" -e "connect \"$1\"" -e "end tell"
+}
+
+TB_disconnect() {
+    osascript -e "tell application \"Tunnelblick\"" -e "disconnect all" -e "end tell"
+}
+
+

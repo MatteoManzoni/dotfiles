@@ -5,7 +5,7 @@ alias ll='ls -l -G -v'
 alias speedtest='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias hcat='highlight --out-format=ansi'
-alias diff='diff --color=auto'
+alias diff='colordiff --text'
 alias grep='grep --color=auto'
 alias cat='(( RANDOM % 4 == 0 )) && cat ~/.meow || cat'
 
