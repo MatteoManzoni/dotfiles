@@ -11,6 +11,7 @@
     {:des "Left Command W Open Calendar"  :rules [[:!Cw "open -acalendar"]]}
     {:des "Left Command A Open Contacts"  :rules [[:!Ca "open -acontacts"]]}
     {:des "Left Command / Open Telegram"  :rules [[:!Cslash "open -atelegram"]]}
+    {:des "Left Command [ Open Tweetbot"  :rules [[:!Copen_bracket "open -aTweetbot"]]}
     {:des "Left Command N Open Notes"  :rules [[:!Cn "open -anotes"]]}
     {:des "Left Command H Open Shortcut file"  :rules [[:!Ch "open ~/.config/karabiner/karabiner.edn"]]}
     {:des "Left Command Shift H Open README.md file"  :rules [[:!CSh "open ~/Projects/Personal/dotfiles/README.md"]]}
@@ -68,7 +69,7 @@
     {:des "Snap Right" :rules [[:!Cright_arrow :!CTright_arrow]]}
     {:des "Snap Left" :rules [[:!Cleft_arrow :!CTleft_arrow]]}
     {:des "Right Copy Terminal" :rules [[:!TSc :!Cc :Terminals]]}
-    {:des "Ctrl C in non terminal" :rules [[:!TSc :!Tc :!Terminals :!Disabled]]}
+    {:des "Ctrl C in non terminal" :rules [[:!TSc :!Tc [:!Terminals :!Disabled]]]}
     {:des "Ctrl L in non terminal" :rules [[:!TSl :!Tl :!Terminals :!Disabled]]}
     {:des "Right Paste Terminal" :rules [[:!TSv :!Cv :Terminals]]}
     {:des "Right Cut Terminal" :rules [[:!TSx :!Cx :Terminals]]}
