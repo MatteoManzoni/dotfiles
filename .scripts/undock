@@ -1,0 +1,10 @@
+VMs=$(vmrun list | grep vmx)
+for $vm in $VMs; do 
+    vmrun suspend $vm
+done
+
+
+ExtDisks=$(diskutil list external physical | grep "/dev/" | awk '{print $1}')
+for $disk in $ExtDisks; do
+    diskutil umountDisk $disk
+done

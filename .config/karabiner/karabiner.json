@@ -290,6 +290,20 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Command U StopVMs and umount external disks",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "m",
+            "modifiers" : {
+              "mandatory" : [ "left_command" ]
+            }
+          },
+          "to" : [ {
+            "shell_command" : "~/.scripts/undock"
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Fix Jabber newline",
         "manipulators" : [ {
           "from" : {
