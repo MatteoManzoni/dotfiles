@@ -1,10 +1,18 @@
+#!/bin/bash
+
 VMs=$(vmrun list | grep vmx)
-for $vm in $VMs; do 
-    vmrun suspend $vm
+for vm in $VMs; do 
+    nohup vmrun suspend $vm &
 done
 
+PIDS=$(ps aux | grep "/Applications/VMware Fusion.app/Contents/MacOS/VMware Fusion" | grep -v "grep")
+for pid in $PIDS; do
+    nohup kill $pid >/dev/null 2>&1 &
+done
+
+sleep 5
 
 ExtDisks=$(diskutil list external physical | grep "/dev/" | awk '{print $1}')
-for $disk in $ExtDisks; do
-    diskutil umountDisk $disk
+for disk in $ExtDisks; do
+    nohup diskutil umountDisk $disk &
 done

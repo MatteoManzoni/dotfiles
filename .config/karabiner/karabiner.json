@@ -178,6 +178,21 @@
           "type" : "basic"
         } ]
       }, {
+        "description" : "Left Command Shift T Open Twitter compose",
+        "manipulators" : [ {
+          "from" : {
+            "key_code" : "t",
+            "modifiers" : {
+              "mandatory" : [ "left_command", "left_shift" ]
+            }
+          },
+          "to" : [ {
+            "key_code" : "t",
+            "modifiers" : [ "left_command", "left_control", "left_option", "left_shift" ]
+          } ],
+          "type" : "basic"
+        } ]
+      }, {
         "description" : "Left Command N Open Notes",
         "manipulators" : [ {
           "from" : {
@@ -293,13 +308,13 @@
         "description" : "Left Command U StopVMs and umount external disks",
         "manipulators" : [ {
           "from" : {
-            "key_code" : "m",
+            "key_code" : "u",
             "modifiers" : {
               "mandatory" : [ "left_command" ]
             }
           },
           "to" : [ {
-            "shell_command" : "~/.scripts/undock"
+            "shell_command" : "bash ~/.scripts/undock &"
           } ],
           "type" : "basic"
         } ]

@@ -12,6 +12,7 @@
     {:des "Left Command A Open Contacts"  :rules [[:!Ca "open -acontacts"]]}
     {:des "Left Command / Open Telegram"  :rules [[:!Cslash "open -atelegram"]]}
     {:des "Left Command [ Open Tweetbot"  :rules [[:!Copen_bracket "open -aTweetbot"]]}
+    {:des "Left Command Shift T Open Twitter compose"  :rules [[:!CSt :!SOTCt]]} 
     {:des "Left Command N Open Notes"  :rules [[:!Cn "open -anotes"]]}
     {:des "Left Command H Open Shortcut file"  :rules [[:!Ch "open ~/.config/karabiner/karabiner.edn"]]}
     {:des "Left Command Shift H Open README.md file"  :rules [[:!CSh "open ~/Projects/Personal/dotfiles/README.md"]]}
@@ -20,7 +21,7 @@
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
     {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}
     {:des "Left Command M Open Music" :rules [[:!Cm "open -aitunes"]]}
-    {:des "Left Command U StopVMs and umount external disks" :rules [[:!Cm "~/.scripts/undock"]]}
+    {:des "Left Command U StopVMs and umount external disks" :rules [[:!Cu "bash ~/.scripts/undock &"]]}
     {:des "Fix Jabber newline" :rules [[:!Sreturn_or_enter :!SOreturn_or_enter :Jabber]]}
     {:des "Left Command J Open Jabber Search menu" :rules [[:!Cj :!CTj]]}
     {:des "Right Copy" :rules [[:!Tc :!Cc :!Disabled]]} 
