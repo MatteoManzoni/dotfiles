@@ -6,11 +6,8 @@
 
 ### Table of contents
 
-- [`My Dotfiles (Fresh from OSx migration)`](#my-dotfiles-fresh-from-osx-migration)
-  - [*You know, just some days of my life gone forever*](#you-know-just-some-days-of-my-life-gone-forever)
-    - [Table of contents](#table-of-contents)
+- [Table of contents](#table-of-contents)
     - [Rationale](#rationale)
-      - [*Have a confy but effective environment on my personal/work laptop*](#have-a-confy-but-effective-environment-on-my-personalwork-laptop)
     - [Dependencies & Useful stuff i use](#dependencies--useful-stuff-i-use)
     - [Installation](#installation)
     - [Alias and functions](#alias-and-functions)
