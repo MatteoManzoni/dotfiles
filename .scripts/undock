@@ -1,18 +1,20 @@
 #!/bin/bash
 
-VMs=$(vmrun list | grep vmx)
+VMs=$(/Applications/VMware\ Fusion.app/Contents/Public/vmrun list | /usr/bin/grep vmx)
 for vm in $VMs; do 
-    nohup vmrun suspend $vm &
+    /Applications/VMware\ Fusion.app/Contents/Public/vmrun suspend $vm 
 done
 
-PIDS=$(ps aux | grep "/Applications/VMware Fusion.app/Contents/MacOS/VMware Fusion" | grep -v "grep")
+PIDS=$(/bin/ps aux | /usr/bin/grep "/Applications/VMware\ Fusion.app/Contents/MacOS/VMware Fusion" | /usr/bin/grep -v "grep")
 for pid in $PIDS; do
-    nohup kill $pid >/dev/null 2>&1 &
+    /bin/kill $pid 
 done
 
-sleep 5
+/bin/sleep 5
 
-ExtDisks=$(diskutil list external physical | grep "/dev/" | awk '{print $1}')
+ExtDisks=$(/usr/sbin/diskutil list external physical | /usr/bin/grep "/dev/" | /usr/bin/awk '{print $1}')
 for disk in $ExtDisks; do
-    nohup diskutil umountDisk $disk &
+    /usr/sbin/diskutil umountDisk $disk 
 done
+
+/usr/local/bin/terminal-notifier -title 'Undock' -message 'Now you can undock you mac' -appIcon /Users/matteo/.themes/undock.png
