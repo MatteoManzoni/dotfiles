@@ -11,8 +11,8 @@ alias cat='(( RANDOM % 4 == 0 )) && cat ~/.meow || cat'
 
 alias updatedb='sudo /usr/libexec/locate.updatedb'
 
-alias personal-git="git config --local user.email \"manzoni.matteo@mailfence.com\" && git config --local user.signingkey 1759D5E5C62E8101"
-alias work-git="git config --local user.email \"matteo.manzoni@elmec.it\" && git config --local user.signingkey 8891A3B2F7F0E3AE"
+alias personal-git="git config --local user.email \"manzoni.matteo@mailfence.com\" && git config --local user.signingkey 1759D5E5C62E8101 && echo '*.swp' > .gitignore && echo '.DS_Store' >> .gitignore"
+alias work-git="git config --local user.email \"matteo.manzoni@elmec.it\" && git config --local user.signingkey 8891A3B2F7F0E3AE && echo '*.swp' > .gitignore && echo '.DS_Store' >> .gitignore"
 
 alias wtfpl='license-up wtfpl Matteo Manzoni'
 alias gpl='license-up gpl3'
