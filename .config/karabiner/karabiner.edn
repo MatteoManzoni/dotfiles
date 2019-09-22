@@ -16,7 +16,7 @@
     {:des "Left Command N Open Notes"  :rules [[:!Cn "open -anotes"]]}
     {:des "Left Command Option H Open GOKU Mappings file"  :rules [[:!COh "open ~/.config/karabiner/karabiner.edn"]]}
     {:des "Left Command Shift H Open README.md file"  :rules [[:!CSh "open ~/Projects/Personal/dotfiles/README.md"]]}
-    {:des "Left Command H Open Useful command file"  :rules [[:!Ch "open ~/.useful_commands"]]}
+    {:des "Left Command H Open Useful command file"  :rules [[:!Ch "open ~/.useful_commands.md"]]}
     {:des "Left Command ' Open Slack"  :rules [[:!Cquote "open -aslack"]]}
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
     {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}

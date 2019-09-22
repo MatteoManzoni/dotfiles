@@ -244,7 +244,7 @@
             }
           },
           "to" : [ {
-            "shell_command" : "open ~/.useful_commands"
+            "shell_command" : "open ~/.useful_commands.md"
           } ],
           "type" : "basic"
         } ]
