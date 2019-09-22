@@ -207,12 +207,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command H Open Shortcut file",
+        "description" : "Left Command Option H Open GOKU Mappings file",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
-              "mandatory" : [ "left_command" ]
+              "mandatory" : [ "left_command", "left_option" ]
             }
           },
           "to" : [ {
@@ -235,12 +235,12 @@
           "type" : "basic"
         } ]
       }, {
-        "description" : "Left Command Option H Open Useful command file",
+        "description" : "Left Command H Open Useful command file",
         "manipulators" : [ {
           "from" : {
             "key_code" : "h",
             "modifiers" : {
-              "mandatory" : [ "left_command", "left_option" ]
+              "mandatory" : [ "left_command" ]
             }
           },
           "to" : [ {
