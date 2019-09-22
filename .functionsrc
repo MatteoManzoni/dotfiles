@@ -48,3 +48,58 @@ wll() {
     curl -O "$(pbpaste)"
 }
 
+backup_borg() {
+    HELP_MESSAGE="This script wants 3 positional parameter:\n\t1- mount if you want to mount a backup, umount if you want to umount one\n\t2- The hostname of the machine of the backup you want to mount\n\t3- The period of the backup you want to mount (eg. morning/midday/night)"
+    
+    if [ $# -ne 3 ] || [ $1 == "-h" ]; then
+        echo -e $HELP_MESSAGE
+        return 1
+    fi
+    
+    MOUNT_FOLDER="$HOME/.local/mount/$2_$3" 
+    RAW_MOUNT_FOLDER="$MOUNT_FOLDER/raw"
+    BORG_MOUNT_FOLDER="$MOUNT_FOLDER/borg" 
+
+    if [ $1 == "mount" ]; then
+        echo "Insert the password of the borg archive"
+        read -s BACKUP_PASSWORD
+
+        mkdir -p $MOUNT_FOLDER
+        mkdir "$RAW_MOUNT_FOLDER"
+        mkdir "$BORG_MOUNT_FOLDER" 
+        sshfs admin@nas-matteo.local:/share/Borg_Backup/$2/repo/$3 $RAW_MOUNT_FOLDER
+        if [ $? -ne 0 ]; then
+            echo "Cant mount selected backup"
+            return 1
+        fi
+        cd $MOUNT_FOLDER
+        BORG_PASSPHRASE="$BACKUP_PASSWORD" BORG_RELOCATED_REPO_ACCESS_IS_OK=yes borg mount $RAW_MOUNT_FOLDER $BORG_MOUNT_FOLDER
+    elif [ $1 == "umount" ]; then
+        mount | grep -q $BORG_MOUNT_FOLDER
+        if [ $? -eq 0 ]; then
+            umount $BORG_MOUNT_FOLDER
+        else
+            echo "BORG backup not mounted"
+            return 1
+        fi
+
+        mount | grep -q $RAW_MOUNT_FOLDER
+        if [ $? -eq 0 ]; then
+            umount $RAW_MOUNT_FOLDER
+        else
+            echo "RAW backup not mounted"
+            return 1
+        fi
+
+        if [ -d $MOUNT_FOLDER ]; then
+            rm -rf $MOUNT_FOLDER
+        else 
+            echo "Backup mount folder do not exist"
+            return 1
+        fi
+    else
+        echo -e $HELP_MESSAGE
+        return 1
+    fi
+
+}
