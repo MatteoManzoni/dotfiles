@@ -46,6 +46,7 @@ Coming from a Linux-only life I wanted the same shortcuts and user experience so
 - [M-Cli](https://github.com/rgcr/m-cli "MacOs admin cli")
 - [Duti](https://github.com/moretension/duti/ "Change MacOS default apps")
 - [Cascadea](https://cascadea.app "Dark theme all the things")
+- [MDV](https://github.com/axiros/terminal_markdown_viewer "A markdown viewer for the terminal")
 
 ### Installation
 
@@ -55,29 +56,7 @@ Coming from a Linux-only life I wanted the same shortcuts and user experience so
 - If everything is setup correctly login and logout
 - Enjoy
 
-### Alias and functions
-
-| Command       | Do What       |
-| ------------- |:-------------:|
-| speedtest     | Run a speedtest |
-| myip          | Show public IP |
-| hcat          | Cat files syntax-highlighted |
-| cat           | Cat with a surprise |
-| updatedb      | Just updatedb  |
-| personal-git  | Setup git with personal info |
-| work-git      | Setup git with work info |
-| wtfpl         | Deploy wtpl license in current dir with my data |
-| gpl           | Deploy gpl license in current dir with my data |
-| mit           | Deploy mit license in current dir with my data |
-| man           | Just man but with colors |
-| ypull         | YADM pull but without ugly README or LICENSE file |
-| ypush         | YADM push but update also the support repository in ~/Projects |
-| gll           | Git clone repo in clipboard |
-| re            | Safer rm, move target to Trash |
-| cfile         | Copy file content to clipboard |
-| fl            | Find word(s) in current folder |
-| server        | Spin up a simple http server and open it in Safari |
-| wll           | curl anything from clipboard content |
+### [Alias and functions](.useful_commands.md "All my custom things and some useful stuff")
 
 ### Karabiner Shortcuts
 
