@@ -20,11 +20,11 @@ __prompt_command() {
     local Red='\[\e[31m\]'
     local BYel='\[\e[1;33m\]'
     local BCya='\[\e[1;96m\]'
-    local BBlu='\[\e[1;34m\]'
+    local BBlue='\[\e[1;34m\]'
     local BPur='\[\e[1;95m\]'
 
     # Prompt prefix
-    PS1="${RCol}\n┌─[\`if [ \$? = 0 ]; then echo ${Gre}✔${RCol}; else echo ${Red}✘${RCol}; fi\`]───[${BYel}\u${RCol}]───[${BCya}\W${RCol}]$(parse_git_branch)\n└───▶${RCol} "
+    PS1="${RCol}\n┌─[\`if [ \$? = 0 ]; then echo ${Gre}✔${RCol}; else echo ${Red}✘${RCol}; fi\`]───[${BYel}\u${RCol}]──$(set_virtualenv)──[${BCya}\W${RCol}]$(parse_git_branch)\n└───▶${RCol} "
 
 }
 
@@ -78,4 +78,12 @@ function parse_git_dirty {
 	else
 		echo ""
 	fi
+}
+function set_virtualenv {
+  if [ -z "$VIRTUAL_ENV" ]; then
+      echo ""
+  else
+      VENV=$(echo "$VIRTUAL_ENV" | rev | cut -d'/' -f 1 | rev)
+      echo "[${BBlue}${VENV}${RCol}]"
+  fi
 }
