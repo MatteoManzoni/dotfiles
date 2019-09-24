@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+exec 2>&1
+
+osascript -e "tell application \"Tunnelblick\"" -e "disconnect all" -e "end tell"
+
+PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep" | awk '{print $2}')
+for pid in $PIDS; do
+    kill $pid
+done
