@@ -15,7 +15,8 @@ export PATH="$HOME/Library/Python/2.7/bin/:$HOME/Library/Python/2.7/bin/:$PATH"
 export PATH="$HOME/.scripts:$PATH"
 export PATH="/usr/local/opt/nss/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/Users/matteo/.go/bin:$PATH"
+export PATH="$HOME/.go/bin:$PATH"
+export CLASSPATH="$CLASSPATH:$HOME/.local/javalib"
 
 #IF I WANT CROMIUM
 export GOOGLE_API_KEY="$(keychain -p -s GOOGLE_API_KEY)"
@@ -23,7 +24,7 @@ export GOOGLE_DEFAULT_CLIENT_ID="$(keychain -p -s GOOGLE_DEFAULT_CLIENT_ID)"
 export GOOGLE_DEFAULT_CLIENT_SECRET="$(keychain -p -s GOOGLE_DEFAULT_CLIENT_SECRET)"
 
 # GOKU POWER
-export GOKU_EDN_CONFIG_FILE=~/.config/karabiner/karabiner.edn
+export GOKU_EDN_CONFIG_FILE="$HOME/.config/karabiner/karabiner.edn"
 
 # MISC
 export GREP_COLOR="1;32"
@@ -35,7 +36,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-export PYTHONPATH="$PYTHONPATH:~/.vim/bundle/ropevim/:~/.vim/bundle/ropemode/:~/.vim/bundle/rope/"
+export PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/:$HOME/.vim/bundle/ropemode/:$HOME/.vim/bundle/rope/"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export EDITOR=vim
 
