@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 exec 2>&1
 
+LOCATION="Hotspot"
+
 osascript -e "tell application \"Tunnelblick\"" -e "disconnect all" -e "end tell"
 
 PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep" | awk '{print $2}')
@@ -9,4 +11,4 @@ for pid in $PIDS; do
 done
 
 # Execute TODOs for location
-/Users/matteo/.locations/TODOs/Hotspot >> /tmp/Hotspot_TODO
+"$HOME/.scripts/run_todos" "$LOCATION"

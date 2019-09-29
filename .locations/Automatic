@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 exec 2>&1
 
+LOCATION="Automatic"
+
 osascript -e "tell application \"Tunnelblick\"" -e "disconnect all" -e "end tell"
 
 PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep")
@@ -11,4 +13,4 @@ done
 osascript -e "tell application \"Tunnelblick\"" -e "connect \"Germany\"" -e "end tell"
 
 # Execute TODOs for location
-/Users/matteo/.locations/TODOs/Automatic >> /tmp/Automatic_TODO
+"$HOME/.scripts/run_todos" "$LOCATION"
