@@ -82,4 +82,6 @@ TB_disconnect() {
     osascript -e "tell application \"Tunnelblick\"" -e "disconnect all" -e "end tell"
 }
 
-
+coreaudiokill() {
+    sudo killall coreaudiod
+}
