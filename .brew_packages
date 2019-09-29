@@ -1,0 +1,236 @@
+#!/bin/bash
+##### WORKING BREW INSTALLATION REQUIRED #####
+
+
+
+# CASKs
+brew cask install adoptopenjdk8
+brew cask install android-platform-tools
+brew cask install android-studio
+brew cask install appcleaner
+brew cask install borgbackup
+brew cask install burp-suite
+brew cask install cutter
+brew cask install db-browser-for-sqlite
+brew cask install disk-inventory-x
+brew cask install dotnet-sdk
+brew cask install firefox-developer-edition
+brew cask install font-powerline-symbols
+brew cask install font-source-code-pro-for-powerline
+brew cask install gitkraken
+brew cask install iina
+brew cask install iterm2
+brew cask install jetbrains-toolbox
+brew cask install kap
+brew cask install karabiner-elements
+brew cask install mactex-no-gui
+brew cask install mysqlworkbench
+brew cask install osxfuse
+brew cask install pdfinfo
+brew cask install postman
+brew cask install powershell
+brew cask install qbserve
+brew cask install tor-browser
+brew cask install tunnelblick
+brew cask install veracrypt
+brew cask install visual-studio-code
+brew cask install wireshark
+
+
+
+# PACKAGES
+brew install adns
+brew install aircrack-ng
+brew install ansible
+brew install apm-bash-completion
+brew install apr
+brew install apr-util
+brew install argon2
+brew install asciinema
+brew install aspell
+brew install atk
+brew install autoconf
+brew install bash
+brew install bash-completion@2
+brew install bettercap
+brew install binwalk
+brew install brotli
+brew install c-ares
+brew install cairo
+brew install cargo-completion
+brew install catimg
+brew install cmake
+brew install colordiff
+brew install coreutils
+brew install cscope
+brew install csvkit
+brew install curl
+brew install curl-openssl
+brew install dash
+brew install dos2unix
+brew install duti
+brew install ettercap
+brew install exiftool
+brew install fontconfig
+brew install fortune
+brew install freetds
+brew install freetype
+brew install fribidi
+brew install gcc
+brew install gdb
+brew install gdbm
+brew install gdk-pixbuf
+brew install geoip
+brew install gettext
+brew install git
+brew install glib
+brew install gmp
+brew install gnu-sed
+brew install gnupg
+brew install gnutls
+brew install go
+brew install goku
+brew install graphite2
+brew install grep
+brew install gsettings-desktop-schemas
+brew install gtk+3
+brew install harfbuzz
+brew install hashcat
+brew install hicolor-icon-theme
+brew install highlight
+brew install htop
+brew install hugo
+brew install icu4c
+brew install ilmbase
+brew install imagemagick
+brew install iproute2mac
+brew install isl
+brew install jadx
+brew install jansson
+brew install jemalloc
+brew install john
+brew install joker
+brew install jpeg
+brew install jq
+brew install launchctl-completion
+brew install ldns
+brew install libassuan
+brew install libde265
+brew install libepoxy
+brew install libev
+brew install libevent
+brew install libffi
+brew install libgcrypt
+brew install libgpg-error
+brew install libheif
+brew install libidn
+brew install libidn2
+brew install libksba
+brew install libmaxminddb
+brew install libmetalink
+brew install libmpc
+brew install libnet
+brew install libomp
+brew install libpcap
+brew install libpng
+brew install libpq
+brew install libsmi
+brew install libsodium
+brew install libssh
+brew install libssh2
+brew install libtasn1
+brew install libtiff
+brew install libtool
+brew install libunistring
+brew install libusb
+brew install libyaml
+brew install libzip
+brew install little-cms2
+brew install lua
+brew install lua@5.1
+brew install luarocks
+brew install lzo
+brew install m-cli
+brew install macvim
+brew install mdv
+brew install mono
+brew install mpfr
+brew install nasm
+brew install ncdu
+brew install ncurses
+brew install neofetch
+brew install nettle
+brew install nghttp2
+brew install ninja
+brew install nload
+brew install nmap
+brew install npth
+brew install nspr
+brew install nss
+brew install nyancat
+brew install oniguruma
+brew install open-completion
+brew install openconnect
+brew install openexr
+brew install openjpeg
+brew install openldap
+brew install openssl
+brew install openssl@1.1
+brew install osx-cpu-temp
+brew install p11-kit
+brew install p7zip
+brew install pandoc
+brew install pango
+brew install parallel
+brew install pcre
+brew install pcre2
+brew install php
+brew install pinentry
+brew install pinentry-mac
+brew install pip-completion
+brew install pixman
+brew install pkg-config
+brew install putty
+brew install python
+brew install python@2
+brew install radare2
+brew install readline
+brew install rtmpdump
+brew install ruby
+brew install rustc-completion
+brew install rustup-init
+brew install s3cmd
+brew install screenresolution
+brew install shared-mime-info
+brew install shellcheck
+brew install sipcalc
+brew install socat
+brew install sqlite
+brew install sqlmap
+brew install ssdeep
+brew install sshfs
+brew install sslscan
+brew install stoken
+brew install tcpdump
+brew install telnet
+brew install terminal-notifier
+brew install termshark
+brew install tidy-html5
+brew install tldr
+brew install tmux
+brew install tnftp
+brew install tree
+brew install unbound
+brew install unixodbc
+brew install watch
+brew install watchexec
+brew install webp
+brew install wget
+brew install whois
+brew install wifi-password
+brew install wireshark
+brew install wpscan
+brew install x265
+brew install xz
+brew install yadm
+brew install youtube-dl

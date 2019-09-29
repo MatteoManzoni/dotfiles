@@ -1,0 +1,21 @@
+#!/bin/bash
+
+BREW_FILE="$HOME/.brew_packages"
+
+CASKs=$(brew cask list -1)
+PACKAGES=$(brew list -1)
+
+echo '#!/bin/bash' > "$BREW_FILE"
+echo '##### WORKING BREW INSTALLATION REQUIRED #####' >> "$BREW_FILE"
+
+echo -e "\n\n" >> "$BREW_FILE"
+echo '# CASKs' >> "$BREW_FILE"
+for cask in $CASKs; do
+    echo "brew cask install $cask" >> "$BREW_FILE"
+done
+
+echo -e "\n\n" >> "$BREW_FILE" 
+echo '# PACKAGES' >> "$BREW_FILE"
+for package in $PACKAGES; do
+    echo "brew install $package" >> "$BREW_FILE"
+done
