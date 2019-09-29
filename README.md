@@ -1,4 +1,4 @@
-# `My Dotfiles (Fresh from OSx migration)` 
+# `My Dotfiles` 
 
 ## *You know, just some days of my life gone forever*  
 
