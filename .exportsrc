@@ -39,6 +39,7 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export PYTHONPATH="$PYTHONPATH:$HOME/.vim/bundle/ropevim/:$HOME/.vim/bundle/ropemode/:$HOME/.vim/bundle/rope/"
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export EDITOR=vim
+export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 
 # Telemetry enyone?
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
