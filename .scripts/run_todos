@@ -4,8 +4,8 @@ LOCATION="$1"
 
 TODO_FILE="$HOME/.locations/TODOs/$LOCATION"
 TODO_LOGs="/tmp/TODOs"
-echo "------------------ $LOCATION TODOs START ------------------" >> $TODO_LOGs
-$TODO_FILE >> $TODO_LOGs
+echo "------------------ $LOCATION TODOs START ------------------" >> $TODO_LOGs 2>&1
+$TODO_FILE >> $TODO_LOGs 2>&1
 echo '#!/bin/bash' > "$TODO_FILE"
 echo -e "\n\n############ INSERT WHAT TO DO AFTER THIS LINE ############" >> "$TODO_FILE"
-echo "------------------ $LOCATION TODOs END ------------------" >> $TODO_LOGs
+echo "------------------ $LOCATION TODOs END ------------------" >> $TODO_LOGs 2>&1
