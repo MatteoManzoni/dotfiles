@@ -1,0 +1,21 @@
+#!/bin/bash
+
+SSH_CONFIG="$HOME/.ssh/config"
+SSH_HOSTS=($(cat "$SSH_CONFIG" | grep "Match host" | grep -v "\*" | grep -v "test" | awk '{print $3}'))
+
+echo -e "The following host are aviable to connect:\n"
+
+count=0
+for host in "${SSH_HOSTS[@]}"; do
+    echo -e "$count)\t${SSH_HOSTS[$count]}"
+    count=$((count+1))
+done
+
+echo -e "\n\n"
+read -p "Insert the host number you want to connect to: $(echo -e '\n>') " CHOOSEN_HOST
+if [ $CHOOSEN_HOST -ge 0 ] && [ $CHOOSEN_HOST -lt $count ]; then
+    ssh ${SSH_HOSTS[$CHOOSEN_HOST]} 
+else
+    echo "Invalid Host"
+    exit 1
+fi
