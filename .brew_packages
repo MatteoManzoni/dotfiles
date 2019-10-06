@@ -6,6 +6,7 @@
 # CASKs
 brew cask install adoptopenjdk8
 brew cask install android-platform-tools
+brew cask install android-sdk
 brew cask install android-studio
 brew cask install appcleaner
 brew cask install borgbackup
@@ -20,6 +21,7 @@ brew cask install font-source-code-pro-for-powerline
 brew cask install gitkraken
 brew cask install iina
 brew cask install iterm2
+brew cask install jd-gui
 brew cask install jetbrains-toolbox
 brew cask install kap
 brew cask install karabiner-elements
@@ -42,6 +44,7 @@ brew cask install wireshark
 brew install adns
 brew install aircrack-ng
 brew install ansible
+brew install apktool
 brew install apm-bash-completion
 brew install apr
 brew install apr-util
@@ -71,11 +74,13 @@ brew install dos2unix
 brew install duti
 brew install ettercap
 brew install exiftool
+brew install findutils
 brew install fontconfig
 brew install fortune
 brew install freetds
 brew install freetype
 brew install fribidi
+brew install gawk
 brew install gcc
 brew install gdb
 brew install gdbm
@@ -85,7 +90,10 @@ brew install gettext
 brew install git
 brew install glib
 brew install gmp
+brew install gnu-getopt
+brew install gnu-indent
 brew install gnu-sed
+brew install gnu-tar
 brew install gnupg
 brew install gnutls
 brew install go
@@ -205,6 +213,7 @@ brew install shared-mime-info
 brew install shellcheck
 brew install sipcalc
 brew install socat
+brew install sqlcipher
 brew install sqlite
 brew install sqlmap
 brew install ssdeep
