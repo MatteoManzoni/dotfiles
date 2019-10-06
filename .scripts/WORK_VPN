@@ -1,5 +1,17 @@
 #!/bin/bash
 
+#####################################################################################
+####   This script was made thanks to the drop of support to 32bit in Catalina   ####
+####   1- Start a Linux VM                                                       ####
+####   2- Send the updated certificates and key                                  ####
+####   3- Send the server user and password of the company I work for            ####
+####   4- Start a custom systemd <3 service                                      ####
+####   5- Update my gateway and DNS                                              ####
+####                                                                             ####
+####   PS: It's full of race condition, I know, dont care                        ####
+#####################################################################################
+
+# Something easy to change
 VMX_PATH="$HOME/Virtual Machines.localized/Work/VPN.vmwarevm/VPN.vmx"
 VM_IP="10.30.20.100"
 PID_FILE="/tmp/.OConnectVPN.pid"
@@ -8,7 +20,8 @@ PRIV_FILE="/tmp/vpn_setup"
 # We will use sudo a lot
 sudo -v
 
-if [ "$1" == "start" ]; then
+# Connect to corporate network
+if [ "$1" == "connect" ]; then
     if [ ! -f "$PID_FILE" ]; then
         # Start it up
         vmrun start "$VMX_PATH" nogui
@@ -28,7 +41,7 @@ if [ "$1" == "start" ]; then
         ssh macos-vpn "echo \"server $(~/.scripts/keychain -p -s ELMEC_VPN_SERVER)\" >> $PRIV_FILE"
         ssh macos-vpn systemctl start OConnectVPN.service
         # Save the old default gateway and set it to the VM IP
-        echo "$(ip r | grep default)" | tee "$PID_FILE"  
+        ip r | grep default > "$PID_FILE"  
         ip r del default
         ip r add default via "$VM_IP"
         # Set the VPN DNS to all connection
@@ -41,29 +54,32 @@ if [ "$1" == "start" ]; then
         echo "Pid lockfile already present"
         exit 1
     fi
-elif [ "$1" == "stop" ]; then
-    # Stop the VPN
-    ssh macos-vpn rm -rf "$PRIV_FILE"
-    ssh macos-vpn systemctl stop OConnectVPN.service
-    # Stop the VM
-    vmrun stop "$VMX_PATH"
-    IFS=$'\n'
-    # Restore the right routes
-    ip r del default
-    for default in $(cat "$PID_FILE" | awk -F'dev' '{print $1}'); do
-        echo "ip r add $default"
-        ip r add "$default"
-    done
-    # Restore DNSs
-    NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
-    
-    for service in $NW_SERVICES; do 
-        sudo networksetup -setdnsservers "$service" 1.1.1.1 1.0.0.1
-    done
-    # Remove the lock
-    #rm "$PID_FILE"
+elif [ "$1" == "disconnect" ]; then
+    if [ -f "$PID_FILE" ]; then
+        # Stop the VPN
+        ssh macos-vpn rm -rf "$PRIV_FILE"
+        ssh macos-vpn systemctl stop OConnectVPN.service
+        # Stop the VM
+        vmrun stop "$VMX_PATH"
+        IFS=$'\n'
+        # Restore the right routes
+        ip r del default
+        # Restore DNSs
+        NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
+        for service in $NW_SERVICES; do 
+            sudo networksetup -setdnsservers "$service" 1.1.1.1 1.0.0.1
+        done
+        for default in $(cat "$PID_FILE" | awk -F'dev' '{print $1}'); do
+            echo "ip r add $default"
+            ip r add "$default"
+        done
+        # Remove the lock
+        rm "$PID_FILE"
+    else
+        echo "No pid lock file found... Are you sure you are connected?"
+    fi
 else
     # You done something wrong
-    echo "GTFO"
+    echo -e "This script is used to connect and disconnect to the corporate VPN network\n\nIt accept:\n\tconnect -> to connect to the corporate VPN\n\tdisconnect -> to disconnect from the corporate network\n"
     exit 1
 fi
