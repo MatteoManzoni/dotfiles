@@ -1,0 +1,69 @@
+#!/bin/bash
+
+VMX_PATH="$HOME/Virtual Machines.localized/Work/VPN.vmwarevm/VPN.vmx"
+VM_IP="10.30.20.100"
+PID_FILE="/tmp/.OConnectVPN.pid"
+PRIV_FILE="/tmp/vpn_setup"
+
+# We will use sudo a lot
+sudo -v
+
+if [ "$1" == "start" ]; then
+    if [ ! -f "$PID_FILE" ]; then
+        # Start it up
+        vmrun start "$VMX_PATH" nogui
+        # Acquire the newest CertID
+        security export -k Elmec.keychain-db -P "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" -f pkcs12 -t identities -o /tmp/VPN_ID.p12
+        openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nocerts -nodes -out /tmp/VPN_ID.key
+        openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nokeys -out /tmp/VPN_ID.pem
+        # Way some time for the VM to come online
+        sleep 20
+        # Put the newest ID in the right place, delete it locally
+        scp /tmp/VPN_ID.pem /tmp/VPN_ID.key macos-vpn:/etc/ssl/certs/Openconnect_VPN/
+        shred -u /tmp/VPN_ID.pem /tmp/VPN_ID.key /tmp/VPN_ID.p12
+        # Start the VPN
+        ssh macos-vpn touch "$PRIV_FILE"
+        ssh macos-vpn chmod 600 "$PRIV_FILE"
+        ssh macos-vpn "echo \"password $(~/.scripts/keychain -p -s ELMEC_DOMAIN_PASSWORD_MANZONI)\" > $PRIV_FILE" 
+        ssh macos-vpn "echo \"server $(~/.scripts/keychain -p -s ELMEC_VPN_SERVER)\" >> $PRIV_FILE"
+        ssh macos-vpn systemctl start OConnectVPN.service
+        # Save the old default gateway and set it to the VM IP
+        echo "$(ip r | grep default)" | tee "$PID_FILE"  
+        ip r del default
+        ip r add default via "$VM_IP"
+        # Set the VPN DNS to all connection
+        NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
+        IFS=$'\n' 
+        for service in $NW_SERVICES; do 
+            sudo networksetup -setdnsservers "$service" 172.16.4.4
+        done
+    else
+        echo "Pid lockfile already present"
+        exit 1
+    fi
+elif [ "$1" == "stop" ]; then
+    # Stop the VPN
+    ssh macos-vpn rm -rf "$PRIV_FILE"
+    ssh macos-vpn systemctl stop OConnectVPN.service
+    # Stop the VM
+    vmrun stop "$VMX_PATH"
+    IFS=$'\n'
+    # Restore the right routes
+    ip r del default
+    for default in $(cat "$PID_FILE" | awk -F'dev' '{print $1}'); do
+        echo "ip r add $default"
+        ip r add "$default"
+    done
+    # Restore DNSs
+    NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
+    
+    for service in $NW_SERVICES; do 
+        sudo networksetup -setdnsservers "$service" 1.1.1.1 1.0.0.1
+    done
+    # Remove the lock
+    #rm "$PID_FILE"
+else
+    # You done something wrong
+    echo "GTFO"
+    exit 1
+fi
