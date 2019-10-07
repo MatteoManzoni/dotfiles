@@ -20,7 +20,7 @@
     {:des "Left Command ' Open Slack"  :rules [[:!Cquote "open -aslack"]]}
     {:des "Left Command ] Open Textual"  :rules [[:!Cclose_bracket "open -aTextual\\ 7"]]}
     {:des "Left Command V Open Finder" :rules [[:!Cv "open -afinder"]]}
-    {:des "Left Command M Open Music" :rules [[:!Cm "open -aitunes"]]}
+    {:des "Left Command M Open Music" :rules [[:!Cm "open -amusic"]]}
     {:des "Left Command U StopVMs and umount external disks" :rules [[:!Cu "bash ~/.scripts/undock &"]]}
     {:des "Fix Jabber newline" :rules [[:!Sreturn_or_enter :!SOreturn_or_enter :Jabber]]}
     {:des "Left Command J Open Jabber Search menu" :rules [[:!Cj :!CTj]]}
