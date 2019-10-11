@@ -14,7 +14,6 @@ brew cask install borgbackup
 brew cask install burp-suite
 brew cask install cutter
 brew cask install db-browser-for-sqlite
-brew cask install disk-inventory-x
 brew cask install dotnet-sdk
 brew cask install firefox-developer-edition
 brew cask install font-powerline-symbols
@@ -132,7 +131,6 @@ brew install icu4c
 brew install ilmbase
 brew install imagemagick
 brew install intltool
-brew install iproute2mac
 brew install isl
 brew install jadx
 brew install jansson
