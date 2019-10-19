@@ -47,9 +47,10 @@ Coming from a Linux-only life I wanted the same shortcuts and user experience so
 
 ### Installation
 
-- Satisfy every aforementioned dependency
+- Satisfy every aforementioned dependency and run 
 - Backup any conflicting dotfile in your home directory
 - `git clone https://gitlab.com/MatteoManzoni/dotfiles.git ~/`
+- Run ./.brew_packages
 - If everything is setup correctly login and logout
 - Enjoy
 
