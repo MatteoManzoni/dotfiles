@@ -41,9 +41,9 @@ if [ "$1" == "connect" ]; then
         ssh macos-vpn "echo \"server $(~/.scripts/keychain -p -s ELMEC_VPN_SERVER)\" >> $PRIV_FILE"
         ssh macos-vpn systemctl start OConnectVPN.service
         # Save the old default gateway and set it to the VM IP
-        ip r | grep default > "$PID_FILE"  
-        ip r del default
-        ip r add default via "$VM_IP"
+        sudo route -n get default | grep gateway | awk '{print $2}' > "$PID_FILE"  
+        sudo route delete default 
+        sudo route add default "$VM_IP"
         # Set the VPN DNS to all connection
         NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
         IFS=$'\n' 
@@ -63,15 +63,15 @@ elif [ "$1" == "disconnect" ]; then
         vmrun stop "$VMX_PATH"
         IFS=$'\n'
         # Restore the right routes
-        ip r del default
+        sudo route delete default
         # Restore DNSs
         NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
         for service in $NW_SERVICES; do 
             sudo networksetup -setdnsservers "$service" 1.1.1.1 1.0.0.1
         done
         for default in $(cat "$PID_FILE" | awk -F'dev' '{print $1}'); do
-            echo "ip r add $default"
-            ip r add "$default"
+            echo "sudo route add default add $default"
+            sudo route add default "$default"
         done
         # Remove the lock
         rm "$PID_FILE"
