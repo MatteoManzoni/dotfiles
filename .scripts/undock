@@ -3,6 +3,14 @@
 VMs=$(/Applications/VMware\ Fusion.app/Contents/Public/vmrun list | /usr/bin/grep vmx)
 for vm in $VMs; do 
     /Applications/VMware\ Fusion.app/Contents/Public/vmrun suspend $vm 
+    /bin/sleep 5
+done
+
+VMs_not_sleeping=$(/Applications/VMware\ Fusion.app/Contents/Public/vmrun list | /usr/bin/grep vmx)
+for vm_problem in $VMs_not_sleeping; do 
+    /Applications/VMware\ Fusion.app/Contents/Public/vmrun stop $vm_problem
+    /usr/local/bin/terminal-notifier -title 'Undock' -message "Stopping $vm_problem due to error suspending" -appIcon /Users/matteo/.themes/undock.png
+    /bin/sleep 5
 done
 
 PIDS=$(/bin/ps aux | /usr/bin/grep "/Applications/VMware\ Fusion.app/Contents/MacOS/VMware Fusion" | /usr/bin/grep -v "grep")
