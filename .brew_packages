@@ -128,9 +128,11 @@ brew install highlight
 brew install htop
 brew install hugo
 brew install icu4c
+brew install iftop
 brew install ilmbase
 brew install imagemagick
 brew install intltool
+brew install iproute2mac
 brew install isl
 brew install jadx
 brew install jansson
@@ -202,6 +204,7 @@ brew install lz4
 brew install lzo
 brew install m-cli
 brew install macvim
+brew install masscan
 brew install mdv
 brew install mono
 brew install mpfr
