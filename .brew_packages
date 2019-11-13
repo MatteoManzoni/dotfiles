@@ -78,6 +78,7 @@ brew install ettercap
 brew install exiftool
 brew install faac
 brew install faad2
+brew install figlet
 brew install findutils
 brew install flac
 brew install fontconfig
@@ -127,6 +128,7 @@ brew install hicolor-icon-theme
 brew install highlight
 brew install htop
 brew install hugo
+brew install hydra
 brew install icu4c
 brew install iftop
 brew install ilmbase
@@ -209,6 +211,7 @@ brew install mdv
 brew install mono
 brew install mpfr
 brew install msgpack
+brew install mysql-client
 brew install nasm
 brew install ncdu
 brew install ncurses
@@ -236,6 +239,7 @@ brew install opus
 brew install orc
 brew install osinfo-db
 brew install osinfo-db-tools
+brew install osslsigncode
 brew install osx-cpu-temp
 brew install p11-kit
 brew install p7zip
@@ -256,6 +260,7 @@ brew install py3cairo
 brew install pygobject3
 brew install python
 brew install python@2
+brew install qemu
 brew install radare2
 brew install readline
 brew install rtmpdump
@@ -278,13 +283,14 @@ brew install sqlmap
 brew install srtp
 brew install ssdeep
 brew install sshfs
-brew install sslscan
+brew install ssllabs-scan
 brew install stoken
 brew install taglib
 brew install tcpdump
 brew install telnet
 brew install terminal-notifier
 brew install termshark
+brew install testssl
 brew install theora
 brew install tidy-html5
 brew install tldr
@@ -296,6 +302,8 @@ brew install unibilium
 brew install unixodbc
 brew install usbredir
 brew install vala
+brew install vde
+brew install vegeta
 brew install virt-viewer
 brew install vte3
 brew install watch
