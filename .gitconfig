@@ -15,3 +15,5 @@
     textconv = pdfinfo
 [core]
 	excludesfile = /Users/matteo/.gitignore
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
