@@ -23,3 +23,6 @@ alias top='top -o cpu'
 alias pwssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 
 alias myhelp='mdv ~/.useful_commands.md'
+
+alias dockerup='docker-machine start default'
+alias dockerdown='docker-machine stop default'
