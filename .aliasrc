@@ -24,5 +24,5 @@ alias pwssh='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no
 
 alias myhelp='mdv ~/.useful_commands.md'
 
-alias dockerup='docker-machine start default'
+alias dockerup='docker-machine start default && docker-machine env > /tmp/.dockerenv && . /tmp/.dockerenv'
 alias dockerdown='docker-machine stop default'
