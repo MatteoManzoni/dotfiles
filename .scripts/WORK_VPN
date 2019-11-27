@@ -30,7 +30,7 @@ if [ "$1" == "connect" ]; then
         openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nocerts -nodes -out /tmp/VPN_ID.key
         openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nokeys -out /tmp/VPN_ID.pem
         # Way some time for the VM to come online
-        sleep 20
+        sleep 40
         # Put the newest ID in the right place, delete it locally
         scp /tmp/VPN_ID.pem /tmp/VPN_ID.key macos-vpn:/etc/ssl/certs/Openconnect_VPN/
         shred -u /tmp/VPN_ID.pem /tmp/VPN_ID.key /tmp/VPN_ID.p12
