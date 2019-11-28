@@ -9,11 +9,13 @@ brew cask install android-platform-tools
 brew cask install android-sdk
 brew cask install android-studio
 brew cask install appcleaner
+brew cask install balenaetcher
 brew cask install bitwarden
 brew cask install borgbackup
 brew cask install burp-suite
 brew cask install cutter
 brew cask install db-browser-for-sqlite
+brew cask install docker
 brew cask install dotnet-sdk
 brew cask install firefox-developer-edition
 brew cask install font-powerline-symbols
@@ -72,6 +74,8 @@ brew install csvkit
 brew install curl
 brew install curl-openssl
 brew install dash
+brew install docker
+brew install docker-machine
 brew install dos2unix
 brew install duti
 brew install ettercap
