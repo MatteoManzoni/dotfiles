@@ -131,6 +131,7 @@ brew install hashcat
 brew install hicolor-icon-theme
 brew install highlight
 brew install htop
+brew install httpd
 brew install hugo
 brew install hydra
 brew install icu4c
@@ -318,6 +319,7 @@ brew install whois
 brew install wifi-password
 brew install wireshark
 brew install wpscan
+brew install wrk
 brew install x264
 brew install x265
 brew install xz
