@@ -26,3 +26,5 @@ alias myhelp='mdv ~/.useful_commands.md'
 
 alias dockerup='docker-machine start default && docker-machine env > /tmp/.dockerenv && . /tmp/.dockerenv'
 alias dockerdown='docker-machine stop default'
+
+alias pipup='pip list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U && pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U' 
