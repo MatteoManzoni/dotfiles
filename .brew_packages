@@ -38,6 +38,7 @@ brew cask install tor-browser
 brew cask install tunnelblick
 brew cask install veracrypt
 brew cask install visual-studio-code
+brew cask install vnc-viewer
 brew cask install wireshark
 
 
@@ -163,6 +164,7 @@ brew install libevent
 brew install libffi
 brew install libgcrypt
 brew install libgpg-error
+brew install libgsf
 brew install libheif
 brew install libidn
 brew install libidn2
@@ -203,6 +205,7 @@ brew install libxml2
 brew install libyaml
 brew install libzip
 brew install little-cms2
+brew install lsusb
 brew install lua
 brew install lua@5.1
 brew install luajit
@@ -254,6 +257,7 @@ brew install parallel
 brew install pcre
 brew install pcre2
 brew install php
+brew install pigz
 brew install pinentry
 brew install pinentry-mac
 brew install pip-completion
@@ -300,6 +304,7 @@ brew install theora
 brew install tidy-html5
 brew install tldr
 brew install tmux
+brew install tmuxinator
 brew install tnftp
 brew install tree
 brew install unbound
