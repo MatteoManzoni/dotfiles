@@ -7,6 +7,7 @@
 
 # Some source to keep all clean
 [[ -f ~/.promptrc ]] && . ~/.promptrc
+rustup completions bash > $(brew --prefix)/etc/bash_completion.d/rustup.bash-completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # BASH OPT
