@@ -12,7 +12,6 @@ brew cask install appcleaner
 brew cask install balenaetcher
 brew cask install bitwarden
 brew cask install borgbackup
-brew cask install burp-suite
 brew cask install cutter
 brew cask install db-browser-for-sqlite
 brew cask install docker
@@ -34,6 +33,7 @@ brew cask install pdfinfo
 brew cask install postman
 brew cask install powershell
 brew cask install qbserve
+brew cask install teamviewer
 brew cask install tor-browser
 brew cask install tunnelblick
 brew cask install veracrypt
@@ -57,6 +57,7 @@ brew install asciinema
 brew install aspell
 brew install atk
 brew install autoconf
+brew install awscli
 brew install bash
 brew install bash-completion@2
 brew install bettercap
@@ -72,6 +73,7 @@ brew install colordiff
 brew install coreutils
 brew install cscope
 brew install csvkit
+brew install ctop
 brew install curl
 brew install curl-openssl
 brew install dash
@@ -100,6 +102,7 @@ brew install gdk-pixbuf
 brew install geoip
 brew install gettext
 brew install ghostscript
+brew install ghq
 brew install git
 brew install glib
 brew install glib-networking
@@ -163,6 +166,8 @@ brew install libev
 brew install libevent
 brew install libffi
 brew install libgcrypt
+brew install libgit2
+brew install libgit2-glib
 brew install libgpg-error
 brew install libgsf
 brew install libheif
@@ -224,6 +229,7 @@ brew install nasm
 brew install ncdu
 brew install ncurses
 brew install neofetch
+brew install nethack
 brew install netpbm
 brew install nettle
 brew install nghttp2
@@ -269,6 +275,7 @@ brew install py3cairo
 brew install pygobject3
 brew install python
 brew install python@2
+brew install python@3.8
 brew install qemu
 brew install radare2
 brew install readline
@@ -294,6 +301,7 @@ brew install ssdeep
 brew install sshfs
 brew install ssllabs-scan
 brew install stoken
+brew install swiftlint
 brew install taglib
 brew install tcpdump
 brew install telnet
@@ -306,6 +314,7 @@ brew install tldr
 brew install tmux
 brew install tmuxinator
 brew install tnftp
+brew install topgrade
 brew install tree
 brew install unbound
 brew install unibilium
@@ -330,4 +339,5 @@ brew install x265
 brew install xz
 brew install yadm
 brew install yajl
+brew install you-get
 brew install youtube-dl
