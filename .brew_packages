@@ -17,8 +17,10 @@ brew cask install db-browser-for-sqlite
 brew cask install docker
 brew cask install dotnet-sdk
 brew cask install firefox-developer-edition
+brew cask install font-hack-nerd-font
 brew cask install font-powerline-symbols
 brew cask install font-source-code-pro-for-powerline
+brew cask install font-terminus-nerd-font
 brew cask install gitkraken
 brew cask install iina
 brew cask install iterm2
@@ -44,10 +46,13 @@ brew cask install wireshark
 
 
 # PACKAGES
+brew install ack
 brew install adns
 brew install adwaita-icon-theme
 brew install aircrack-ng
 brew install ansible
+brew install ansible-lint
+brew install aom
 brew install apktool
 brew install apm-bash-completion
 brew install apr
@@ -58,6 +63,7 @@ brew install aspell
 brew install atk
 brew install autoconf
 brew install awscli
+brew install bandwhich
 brew install bash
 brew install bash-completion@2
 brew install bettercap
@@ -67,9 +73,11 @@ brew install c-ares
 brew install cairo
 brew install cargo-completion
 brew install catimg
+brew install certigo
 brew install check
 brew install cmake
 brew install colordiff
+brew install conjure-up
 brew install coreutils
 brew install cscope
 brew install csvkit
@@ -81,10 +89,12 @@ brew install docker
 brew install docker-machine
 brew install dos2unix
 brew install duti
+brew install entr
 brew install ettercap
 brew install exiftool
 brew install faac
 brew install faad2
+brew install ffmpeg
 brew install figlet
 brew install findutils
 brew install flac
@@ -92,6 +102,7 @@ brew install fontconfig
 brew install fortune
 brew install freetds
 brew install freetype
+brew install frei0r
 brew install fribidi
 brew install gawk
 brew install gcc
@@ -103,7 +114,10 @@ brew install geoip
 brew install gettext
 brew install ghostscript
 brew install ghq
+brew install giflib
 brew install git
+brew install git-quick-stats
+brew install gitmoji
 brew install glib
 brew install glib-networking
 brew install gmp
@@ -148,17 +162,23 @@ brew install isl
 brew install jadx
 brew install jansson
 brew install jasper
+brew install jbig2enc
 brew install jemalloc
 brew install john
 brew install joker
 brew install jpeg
 brew install jq
 brew install json-glib
+brew install juju
+brew install juju-wait
 brew install lame
 brew install launchctl-completion
 brew install ldns
+brew install leptonica
 brew install libarchive
+brew install libass
 brew install libassuan
+brew install libbluray
 brew install libcroco
 brew install libde265
 brew install libepoxy
@@ -188,10 +208,13 @@ brew install libpng
 brew install libpq
 brew install libpsl
 brew install librsvg
+brew install libsamplerate
 brew install libshout
 brew install libsmi
+brew install libsndfile
 brew install libsodium
 brew install libsoup
+brew install libsoxr
 brew install libssh
 brew install libssh2
 brew install libtasn1
@@ -201,6 +224,7 @@ brew install libtool
 brew install libunistring
 brew install libusb
 brew install libuv
+brew install libvidstab
 brew install libvirt
 brew install libvirt-glib
 brew install libvorbis
@@ -221,6 +245,7 @@ brew install m-cli
 brew install macvim
 brew install masscan
 brew install mdv
+brew install mmark
 brew install mono
 brew install mpfr
 brew install msgpack
@@ -241,9 +266,11 @@ brew install npth
 brew install nspr
 brew install nss
 brew install nyancat
+brew install ocrmypdf
 brew install oniguruma
 brew install open-completion
 brew install openconnect
+brew install opencore-amr
 brew install openexr
 brew install openjpeg
 brew install openldap
@@ -269,26 +296,38 @@ brew install pinentry-mac
 brew install pip-completion
 brew install pixman
 brew install pkg-config
+brew install plotutils
+brew install pngquant
+brew install pstoedit
 brew install putty
+brew install pwgen
 brew install py2cairo
 brew install py3cairo
+brew install pybind11
 brew install pygobject3
 brew install python
 brew install python@2
 brew install python@3.8
 brew install qemu
+brew install qpdf
 brew install radare2
 brew install readline
+brew install redis
+brew install rex
 brew install rtmpdump
+brew install rubberband
 brew install ruby
+brew install run
 brew install rust
 brew install rustc-completion
 brew install rustup-init
 brew install s3cmd
 brew install screenresolution
+brew install sdl2
 brew install shared-mime-info
 brew install shellcheck
 brew install sipcalc
+brew install snappy
 brew install socat
 brew install speex
 brew install spice-gtk
@@ -300,25 +339,31 @@ brew install srtp
 brew install ssdeep
 brew install sshfs
 brew install ssllabs-scan
+brew install starship
 brew install stoken
+brew install swagger-codegen
 brew install swiftlint
 brew install taglib
 brew install tcpdump
 brew install telnet
 brew install terminal-notifier
 brew install termshark
+brew install tesseract
 brew install testssl
 brew install theora
 brew install tidy-html5
 brew install tldr
 brew install tmux
 brew install tmuxinator
+brew install tmuxinator-completion
 brew install tnftp
 brew install topgrade
 brew install tree
+brew install tunnel
 brew install unbound
 brew install unibilium
 brew install unixodbc
+brew install unpaper
 brew install usbredir
 brew install vala
 brew install vde
@@ -336,6 +381,7 @@ brew install wpscan
 brew install wrk
 brew install x264
 brew install x265
+brew install xvid
 brew install xz
 brew install yadm
 brew install yajl
