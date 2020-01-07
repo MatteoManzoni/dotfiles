@@ -57,3 +57,5 @@ export HOMEBREW_GITHUB_API_TOKEN=$(keychain -p -s HOMEBREW_GITHUB_API_TOKEN)
 # FY MAC UTILS (Nice but break to many things)
 #export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 #export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+export SHELL_BASE="$(basename $SHELL)"

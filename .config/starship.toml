@@ -25,11 +25,11 @@ style_failure = "bold red"
 disabled = true
 
 [directory]
-truncation_length = 8
+truncation_length = 3
 
 [env_var]
-variable = "SHELL"
-default = "unknown shell"
+variable = "SHELL_BASE"
+default = "unknown"
 style = "dimmed green"
 
 [hostname]
