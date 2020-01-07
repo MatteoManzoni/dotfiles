@@ -30,13 +30,13 @@ truncation_length = 3
 [env_var]
 variable = "SHELL_BASE"
 default = "unknown"
-style = "dimmed green"
+style = "#6cff5e"
 
 [hostname]
 ssh_only = false
 prefix = "⟪"
 suffix = "⟫"
-style = "#ff9d26"
+style = "#ff7326"
 trim_at = ".elmec.ad"
 disabled = false
 
