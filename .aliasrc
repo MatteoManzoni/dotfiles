@@ -30,4 +30,5 @@ alias dockerdown='docker-machine stop default'
 alias pipup='pip2 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U; pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U'
 
 alias rpimons='tmuxinator start rpimons'
+alias cyberblog='tmuxinator start cybergon_blog'
 alias elm_timons='tmuxinator start elmec_timons'
