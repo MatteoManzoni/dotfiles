@@ -1,0 +1,83 @@
+[aws]
+disabled = true
+symbol = " "
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+[[battery.display]]
+threshold = 25
+style = "bold red"
+[[battery.display]] 
+threshold = 45
+style = "bold yellow"
+
+[character]
+#symbol = "➜"
+error_symbol = "✗"
+use_symbol_for_status = true
+vicmd_symbol = "❮"
+style_success = "bold green"
+style_failure = "bold red"
+
+[cmd_duration]
+disabled = true
+
+[directory]
+truncation_length = 8
+
+[env_var]
+variable = "SHELL"
+default = "unknown shell"
+style = "dimmed green"
+
+[hostname]
+ssh_only = false
+prefix = "⟪"
+suffix = "⟫"
+style = "#ff9d26"
+trim_at = ".elmec.ad"
+disabled = false
+
+[username]
+disabled = false
+show_always = true
+
+[conda]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+
