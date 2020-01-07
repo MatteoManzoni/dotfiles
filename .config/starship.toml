@@ -36,7 +36,7 @@ style = "#6cff5e"
 ssh_only = false
 prefix = "⟪"
 suffix = "⟫"
-style = "#ff7326"
+style = "#ff8b1f"
 trim_at = ".elmec.ad"
 disabled = false
 
