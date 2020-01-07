@@ -1,17 +1,6 @@
 #!/bin/bash
 
-# TMUX POWER
-if [[ -z "$TMUX" ]] ;then
-    ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
-    if [[ -z "$ID" ]] ;then # if not available create a new one
-        exec tmux new-session
-    else
-        exec tmux attach-session -t "$ID" # if available attach to it
-    fi
-fi
-
-PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
-
+# Put together PS1 generation
 __prompt_command() {
     PS1=""
 
@@ -28,7 +17,7 @@ __prompt_command() {
 
 }
 
-# get current branch in git repo
+# Get current branch in git repo
 function parse_git_branch() {
     BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
 	if [ ! "${BRANCH}" == "" ]
@@ -39,8 +28,7 @@ function parse_git_branch() {
 		echo ""
 	fi
 }
-
-# get current status of git repo
+# Get current status of git repo
 function parse_git_dirty {
     #git fetch origin &>/dev/null & #cool but maybe too much
     status=$(git status 2>&1 | tee)
@@ -79,6 +67,7 @@ function parse_git_dirty {
 		echo ""
 	fi
 }
+# Set something on the prompt if in venv
 function set_virtualenv {
   if [ -z "$VIRTUAL_ENV" ]; then
       echo ""
@@ -87,3 +76,34 @@ function set_virtualenv {
       echo "[${BBlue}${VENV}${RCol}]"
   fi
 }
+# Set a custom title to the current window
+function set_win_title(){
+    echo -ne "\033]0; Matteo's Terminal Emulator \007"
+}
+# Setup tmux config but only if not in tmux, attach old sessions
+function setup_tmux(){
+    if [[ -z "$TMUX" ]] ;then
+        ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+        if [[ -z "$ID" ]] ;then # if not available create a new one
+            exec tmux new-session
+        else
+            exec tmux attach-session -t "$ID" # if available attach to it
+        fi
+    fi
+}
+# Set windows title to something
+function set_win_title(){
+    echo -ne "\033]0; Matteo's Terminal Emulator \007"
+}
+
+
+
+# TMUX setup
+setup_tmux
+
+# Starship source
+starship_precmd_user_func="set_win_title"
+eval "$(starship init bash)"
+
+# Now using starship
+#PROMPT_COMMAND=__prompt_command # Func to gen PS1 after CMDs
