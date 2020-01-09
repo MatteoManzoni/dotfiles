@@ -22,6 +22,7 @@ brew cask install font-powerline-symbols
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-terminus-nerd-font
 brew cask install gitkraken
+brew cask install google-chrome-dev
 brew cask install iina
 brew cask install iterm2
 brew cask install jd-gui
@@ -41,6 +42,7 @@ brew cask install tunnelblick
 brew cask install veracrypt
 brew cask install visual-studio-code
 brew cask install vnc-viewer
+brew cask install webex-teams
 brew cask install wireshark
 
 
@@ -68,6 +70,7 @@ brew install bash
 brew install bash-completion@2
 brew install bettercap
 brew install binwalk
+brew install brew-cask-completion
 brew install brotli
 brew install c-ares
 brew install cairo
@@ -76,6 +79,7 @@ brew install catimg
 brew install certigo
 brew install check
 brew install cmake
+brew install cobalt
 brew install colordiff
 brew install conjure-up
 brew install coreutils
@@ -86,6 +90,7 @@ brew install curl
 brew install curl-openssl
 brew install dash
 brew install docker
+brew install docker-compose
 brew install docker-machine
 brew install dos2unix
 brew install duti
@@ -104,6 +109,7 @@ brew install freetds
 brew install freetype
 brew install frei0r
 brew install fribidi
+brew install fzf
 brew install gawk
 brew install gcc
 brew install gd
@@ -244,7 +250,10 @@ brew install lzo
 brew install m-cli
 brew install macvim
 brew install masscan
+brew install mat2
+brew install mdcat
 brew install mdv
+brew install micropython
 brew install mmark
 brew install mono
 brew install mpfr
@@ -298,6 +307,8 @@ brew install pixman
 brew install pkg-config
 brew install plotutils
 brew install pngquant
+brew install poppler
+brew install procs
 brew install pstoedit
 brew install putty
 brew install pwgen
@@ -310,6 +321,7 @@ brew install python@2
 brew install python@3.8
 brew install qemu
 brew install qpdf
+brew install qt
 brew install radare2
 brew install readline
 brew install redis
