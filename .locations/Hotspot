@@ -5,7 +5,14 @@ LOCATION="Hotspot"
 
 osascript -e "tell application \"Tunnelblick\"" -e "disconnect all" -e "end tell"
 
-PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep" | awk '{print $2}')
+# Kill jabber
+#PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep")
+#for pid in $PIDS; do
+#    kill $pid
+#done
+
+# Undergoing Webex Teams PoC
+PIDS=$(ps aux | grep "Webex Teams" | grep -v "grep")
 for pid in $PIDS; do
     kill $pid
 done

@@ -3,7 +3,14 @@ exec 2>&1
 
 LOCATION="UNI"
 
-PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep")
+# Kill jabber
+#PIDS=$(ps aux | grep "Cisco Jabber" | grep -v "grep")
+#for pid in $PIDS; do
+#    kill $pid
+#done
+
+# Undergoing Webex Teams PoC
+PIDS=$(ps aux | grep "Webex Teams" | grep -v "grep")
 for pid in $PIDS; do
     kill $pid
 done
