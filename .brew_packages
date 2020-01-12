@@ -68,6 +68,7 @@ brew install awscli
 brew install bandwhich
 brew install bash
 brew install bash-completion@2
+brew install bdw-gc
 brew install bettercap
 brew install binwalk
 brew install brew-cask-completion
@@ -78,6 +79,7 @@ brew install cargo-completion
 brew install catimg
 brew install certigo
 brew install check
+brew install choose
 brew install cmake
 brew install cobalt
 brew install colordiff
@@ -105,6 +107,7 @@ brew install findutils
 brew install flac
 brew install fontconfig
 brew install fortune
+brew install fpp
 brew install freetds
 brew install freetype
 brew install frei0r
@@ -126,6 +129,7 @@ brew install git-quick-stats
 brew install gitmoji
 brew install glib
 brew install glib-networking
+brew install glide
 brew install gmp
 brew install gnu-getopt
 brew install gnu-indent
@@ -135,6 +139,7 @@ brew install gnupg
 brew install gnutls
 brew install go
 brew install gobject-introspection
+brew install godep
 brew install goku
 brew install graphite2
 brew install graphviz
@@ -327,6 +332,7 @@ brew install readline
 brew install redis
 brew install rex
 brew install rtmpdump
+brew install rtv
 brew install rubberband
 brew install ruby
 brew install run
@@ -382,6 +388,7 @@ brew install vde
 brew install vegeta
 brew install virt-viewer
 brew install vte3
+brew install w3m
 brew install watch
 brew install watchexec
 brew install webp
@@ -396,6 +403,7 @@ brew install x265
 brew install xvid
 brew install xz
 brew install yadm
+brew install yaegi
 brew install yajl
 brew install you-get
 brew install youtube-dl
