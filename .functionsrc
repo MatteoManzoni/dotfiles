@@ -103,3 +103,5 @@ backup_borg() {
     fi
 
 }
+
+source /Users/matteo/Library/Preferences/org.dystroy.broot/launcher/bash/br
