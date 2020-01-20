@@ -72,6 +72,7 @@ brew install bdw-gc
 brew install bettercap
 brew install binwalk
 brew install brew-cask-completion
+brew install broot
 brew install brotli
 brew install c-ares
 brew install cairo
@@ -96,6 +97,7 @@ brew install docker-compose
 brew install docker-machine
 brew install dos2unix
 brew install duti
+brew install e2fsprogs
 brew install entr
 brew install ettercap
 brew install exiftool
@@ -114,6 +116,7 @@ brew install frei0r
 brew install fribidi
 brew install fzf
 brew install gawk
+brew install gcab
 brew install gcc
 brew install gd
 brew install gdb
@@ -155,6 +158,7 @@ brew install gtk+3
 brew install gtk-vnc
 brew install gtksourceview4
 brew install gts
+brew install haproxy
 brew install harfbuzz
 brew install hashcat
 brew install hicolor-icon-theme
@@ -263,6 +267,7 @@ brew install mmark
 brew install mono
 brew install mpfr
 brew install msgpack
+brew install msitools
 brew install mysql-client
 brew install nasm
 brew install ncdu
@@ -386,6 +391,7 @@ brew install usbredir
 brew install vala
 brew install vde
 brew install vegeta
+brew install virt-manager
 brew install virt-viewer
 brew install vte3
 brew install w3m
