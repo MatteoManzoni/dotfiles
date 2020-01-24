@@ -401,6 +401,8 @@ brew install webp
 brew install wget
 brew install whois
 brew install wifi-password
+brew install wireguard-go
+brew install wireguard-tools
 brew install wireshark
 brew install wpscan
 brew install wrk
