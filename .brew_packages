@@ -21,6 +21,7 @@ brew cask install font-hack-nerd-font
 brew cask install font-powerline-symbols
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-terminus-nerd-font
+brew cask install ghidra
 brew cask install gitkraken
 brew cask install google-chrome-dev
 brew cask install iina
@@ -95,6 +96,7 @@ brew install dash
 brew install docker
 brew install docker-compose
 brew install docker-machine
+brew install docutils
 brew install dos2unix
 brew install duti
 brew install e2fsprogs
@@ -161,6 +163,8 @@ brew install gts
 brew install haproxy
 brew install harfbuzz
 brew install hashcat
+brew install helm
+brew install helmfile
 brew install hicolor-icon-theme
 brew install highlight
 brew install htop
@@ -186,6 +190,7 @@ brew install jq
 brew install json-glib
 brew install juju
 brew install juju-wait
+brew install kubernetes-cli
 brew install lame
 brew install launchctl-completion
 brew install ldns
@@ -277,6 +282,7 @@ brew install nethack
 brew install netpbm
 brew install nettle
 brew install nghttp2
+brew install nginx
 brew install ninja
 brew install nload
 brew install nmap
