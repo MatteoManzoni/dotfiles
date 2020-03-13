@@ -32,6 +32,5 @@ alias pipup='pip2 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f
 alias powertop='sudo powermetrics --show-process-energy'
 
 alias rpimons='tmuxinator start rpimons'
-alias cyberblog='tmuxinator start cybergon_blog'
 alias elm_timons='tmuxinator start elmec_timons'
-alias ace_clusters='tmuxinator start ace_clusters'
+alias space_clusters='tmuxinator start space_clusters'
