@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
     printf 'Insert the IP of the ASA you want to connect to: '
     read -r ASA_IP
 else
     ASA_IP="$1"
 fi
 
-java -cp /Users/matteo/.local/javalib/netx.jar net.sourceforge.jnlp.runtime.Boot -Xnofork -jnlp https://$ASA_IP/admin/public/asdm.jnlp
+/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/java -cp /Users/matteo/.local/javalib/netx.jar net.sourceforge.jnlp.runtime.Boot -Xnofork -jnlp https://$ASA_IP/admin/public/asdm.jnlp
