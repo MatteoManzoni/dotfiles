@@ -9,77 +9,138 @@
 ####   5- Update my gateway and DNS                                              ####
 ####                                                                             ####
 ####   PS: It's full of race condition, I know, dont care                        ####
+####   PPS: Added fortiVPN on the fly                                            ####
 #####################################################################################
 
 # Something easy to change
 VMX_PATH="$HOME/Virtual Machines.localized/Work/VPN.vmwarevm/VPN.vmx"
 VM_IP="10.30.20.100"
-PID_FILE="/tmp/.OConnectVPN.pid"
+PID_FILE="/tmp/.elmvpn.pid"
 PRIV_FILE="/tmp/vpn_setup"
 
 # We will use sudo a lot
 sudo -v
 
-# Connect to corporate network
-if [ "$1" == "connect" ]; then
-    if [ ! -f "$PID_FILE" ]; then
-        # Start it up
-        vmrun start "$VMX_PATH" nogui
-        # Acquire the newest CertID
-        security export -k Elmec.keychain-db -P "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" -f pkcs12 -t identities -o /tmp/VPN_ID.p12
-        openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nocerts -nodes -out /tmp/VPN_ID.key
-        openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nokeys -out /tmp/VPN_ID.pem
-        # Way some time for the VM to come online
-        sleep 40
-        # Put the newest ID in the right place, delete it locally
-        scp /tmp/VPN_ID.pem /tmp/VPN_ID.key macos-vpn:/etc/ssl/certs/Openconnect_VPN/
-        shred -u /tmp/VPN_ID.pem /tmp/VPN_ID.key /tmp/VPN_ID.p12
-        # Start the VPN
-        ssh macos-vpn touch "$PRIV_FILE"
-        ssh macos-vpn chmod 600 "$PRIV_FILE"
-        ssh macos-vpn "echo \"password $(~/.scripts/keychain -p -s ELMEC_DOMAIN_PASSWORD_MANZONI)\" > $PRIV_FILE" 
-        ssh macos-vpn "echo \"server $(~/.scripts/keychain -p -s ELMEC_VPN_SERVER)\" >> $PRIV_FILE"
-        ssh macos-vpn systemctl start OConnectVPN.service
-        # Save the old default gateway and set it to the VM IP
-        sudo route -n get default | grep gateway | awk '{print $2}' > "$PID_FILE"  
-        sudo route delete default 
-        sudo route add default "$VM_IP"
-        # Set the VPN DNS to all connection
-        NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
-        IFS=$'\n' 
-        for service in $NW_SERVICES; do 
-            sudo networksetup -setdnsservers "$service" 172.16.4.4
-        done
-    else
-        echo "Pid lockfile already present"
-        exit 1
-    fi
-elif [ "$1" == "disconnect" ]; then
-    if [ -f "$PID_FILE" ]; then
-        # Stop the VPN
-        ssh macos-vpn rm -rf "$PRIV_FILE"
-        ssh macos-vpn systemctl stop OConnectVPN.service
-        # Stop the VM
-        vmrun stop "$VMX_PATH"
-        IFS=$'\n'
-        # Restore the right routes
-        sudo route delete default
-        # Restore DNSs
-        NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
-        for service in $NW_SERVICES; do 
-            sudo networksetup -setdnsservers "$service" 1.1.1.1 1.0.0.1
-        done
-        for default in $(cat "$PID_FILE" | awk -F'dev' '{print $1}'); do
-            echo "sudo route add default add $default"
-            sudo route add default "$default"
-        done
-        # Remove the lock
-        rm "$PID_FILE"
-    else
-        echo "No pid lock file found... Are you sure you are connected?"
-    fi
-else
-    # You done something wrong
-    echo -e "This script is used to connect and disconnect to the corporate VPN network\n\nIt accept:\n\tconnect -> to connect to the corporate VPN\n\tdisconnect -> to disconnect from the corporate network\n"
+get_certs(){
+    security export -k Elmec.keychain-db -P "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" -f pkcs12 -t identities -o /tmp/VPN_ID.p12
+    openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nocerts -nodes -out /tmp/VPN_ID.key
+    openssl pkcs12 -in /tmp/VPN_ID.p12 -passin file:<( echo -n "$(keychain -p -s VPN_ID_EXPORT_PASSWORD)" ) -nokeys -out /tmp/VPN_ID.pem
+
+}
+
+cisco_vpn_connect(){
+    # Start it up
+    vmrun start "$VMX_PATH" nogui
+    # Acquire the newest CertID
+    get_certs 
+    # Way some time for the VM to come online
+    sleep 40
+    # Put the newest ID in the right place, delete it locally
+    scp /tmp/VPN_ID.pem /tmp/VPN_ID.key macos-vpn:/etc/ssl/certs/Openconnect_VPN/
+    shred -u /tmp/VPN_ID.key /tmp/VPN_ID_enc.key /tmp/VPN_ID.pem /tmp/VPN_ID.p12
+    # Start the VPN
+    ssh macos-vpn touch "$PRIV_FILE"
+    ssh macos-vpn chmod 600 "$PRIV_FILE"
+    ssh macos-vpn "echo \"password $(~/.scripts/keychain -p -s ELMEC_DOMAIN_PASSWORD_MANZONI)\" > $PRIV_FILE" 
+    ssh macos-vpn "echo \"server $(~/.scripts/keychain -p -s ELMEC_VPN_SERVER)\" >> $PRIV_FILE"
+    ssh macos-vpn systemctl start OConnectVPN.service
+    # Save the old default gateway and set it to the VM IP
+    sudo route -n get default | grep gateway | awk '{print $2}' > "$PID_FILE"  
+    sudo route delete default 
+    sudo route add default "$VM_IP"
+    # Set the VPN DNS to all connection
+    NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
+    IFS=$'\n' 
+    for service in $NW_SERVICES; do 
+        sudo networksetup -setdnsservers "$service" 172.16.4.4
+    done
+}
+
+cisco_vpn_disconnect() {
+    # Stop the VPN
+    ssh macos-vpn rm -rf "$PRIV_FILE"
+    ssh macos-vpn systemctl stop OConnectVPN.service
+    # Stop the VM
+    vmrun stop "$VMX_PATH"
+    IFS=$'\n'
+    # Restore the right routes
+    sudo route delete default
+    # Restore DNSs
+    NW_SERVICES=$(networksetup -listallnetworkservices | grep -vi -e "*" -e "vpn" -e "PAN")
+    for service in $NW_SERVICES; do 
+        sudo networksetup -setdnsservers "$service" 1.1.1.1 1.0.0.1
+    done
+    for default in $(cat "$PID_FILE" | awk -F'dev' '{print $1}'); do
+        echo "sudo route add default add $default"
+        sudo route add default "$default"
+    done
+    # Remove the lock
+    rm "$PID_FILE"
+}
+
+forti_vpn_connect() {
+
+    get_certs
+
+    ELMEC_DOMAIN_PASSWORD_MANZONI="$(~/.scripts/keychain -p -s ELMEC_DOMAIN_PASSWORD_MANZONI)"
+    ELMEC_VPN_SERVER_FORTINET="$(~/.scripts/keychain -p -s ELMEC_VPN_SERVER_FORTINET)"
+
+    echo "$ELMEC_DOMAIN_PASSWORD_MANZONI" | nohup sudo openfortivpn "$ELMEC_VPN_SERVER_FORTINET" -qqqq -u manzoni --realm=elmec-AD --trusted-cert 8123889cbaa0dd11f7c4f06655fa526d9c5fed89e3dc8f7dce555cc7bb09868a --user-cert=/tmp/VPN_ID.pem --user-key=/tmp/VPN_ID.key --pppd-use-peerdns=1 > /tmp/elm_fortivpn.log &
+    echo "$!" > "$PID_FILE" 
+    
+}
+
+forti_vpn_disconnect() {
+    sudo shred -u /tmp/VPN_ID.key /tmp/VPN_ID.pem /tmp/VPN_ID.p12
+
+    sudo kill -15 "$(cat $PID_FILE)"
+    
+    sleep 5
+
+    sudo rm "$PID_FILE"
+}
+
+_help(){
+    echo -e "This script is used to connect and disconnect to the corporate VPN network\n\nYou have to choose which VPN to use:\n\tforti -> Fortinet split VPN\n\tcisco -> Old full cisco anyconnect\n\nAnd choose the operation to perform:\n\tconnect -> to connect to the corporate VPN\n\tdisconnect -> to disconnect from the corporate network\n"
     exit 1
-fi
+}
+
+__main__() {
+    if [[ "$1" == "forti" && ( "$2" == "connect" || "$2" == "disconnect") ]]; then
+        echo "Fortivpn choosen..."
+        if [[ "$2" == connect ]]; then
+            if [ ! -f "$PID_FILE" ]; then
+                forti_vpn_connect
+            else
+                echo "Found existing pid file, are you shure you're disconnected?"
+                exit 1
+            fi
+        else
+            if [ -f "$PID_FILE" ]; then
+                forti_vpn_disconnect
+            else
+                echo "No pid lock file found... Are you sure you are connected?"
+            fi
+        fi
+    elif [[ "$1" == "cisco" && ( "$2" == "connect" || "$2" == "disconnect") ]]; then
+        echo "Cisco anyconnect choosen..."
+        if [[ "$2" == connect ]]; then
+            if [ ! -f "$PID_FILE" ]; then
+                cisco_vpn_connect
+            else
+                echo "Found existing pid file, are you shure you're disconnected?"
+                exit 1
+            fi
+        else
+            if [ -f "$PID_FILE" ]; then
+                cisco_vpn_disconnect
+            else
+                echo "No pid lock file found... Are you sure you are connected?"
+            fi
+        fi
+    else
+        _help
+    fi
+}
+
+__main__ "$@"
